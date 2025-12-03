@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bebas_Neue, Space_Grotesk } from "next/font/google";
+import Navbar from "./(components)/Navbar";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Alternative to Tusker - bold display font
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  variable: "--font-tusker",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Alternative to ClashDisplay - modern geometric sans
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-clash",
   subsets: ["latin"],
 });
 
@@ -25,8 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${bebasNeue.variable} ${spaceGrotesk.variable} antialiased`}
       >
+        <Navbar/>
         {children}
       </body>
     </html>

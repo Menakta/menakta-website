@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-menakta-primaryFirst: #0041D5;
+  --color-menakta-primarySecond: #00B0FF;
+  --color-menakta-secondaryFirst: #0B0B0A;
+  --color-menakta-secondarySecond: #F4F4F4;
+
+  --font-tusker: var(--font-tusker), sans-serif;
+  --font-clash: var(--font-clash), sans-serif;
+
+  /* Float animations */
+  --animate-float-slow: float-slow 6s ease-in-out infinite;
+  --animate-float-medium: float-medium 4s ease-in-out infinite;
+  --animate-float-fast: float-fast 3s ease-in-out infinite;
+
+  /* Gentle wave animations */
+  --animate-wave-gentle-1: wave-gentle-1 8s ease-in-out infinite;
+  --animate-wave-gentle-2: wave-gentle-2 6s ease-in-out infinite;
+  --animate-wave-gentle-3: wave-gentle-3 5s ease-in-out infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Gentle Wave Keyframes - subtle up/down movement */
+@keyframes wave-gentle-1 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes wave-gentle-2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes wave-gentle-3 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Float Keyframes */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-15px) translateX(-8px);
+    opacity: 0.7;
+  }
+}
+
+@keyframes float-fast {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-10px) translateX(5px);
+    opacity: 0.5;
+  }
 }
