@@ -48,13 +48,13 @@ export default function MiddleImageSection() {
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link href={"/services"} className="w-full sm:w-auto opacity-0 animate-[fadeInUp_0.6s_ease-out_1.2s_forwards]">
-            <button className="w-full sm:w-auto font-clash px-8 py-4 bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond text-menakta-secondarySecond uppercase rounded-full text-sm tracking-wider hover:shadow-lg hover:shadow-menakta-primarySecond/30 active:scale-95 transition-all duration-300">
+            <button className="w-full sm:w-auto font-clash px-8 py-4 bg-gradient-to-r from-menakta-primaryFirst to-purple-600 border border-transparent text-white uppercase rounded-full text-sm tracking-wider hover:shadow-lg hover:shadow-menakta-primaryFirst/30 hover:scale-105 active:scale-95 transition-all duration-300">
               Our Services
             </button>
           </Link>
           <button
             onClick={scrollToContact}
-            className="w-full sm:w-auto font-clash px-8 py-4 border border-menakta-secondarySecond/30 text-menakta-secondarySecond rounded-full text-sm uppercase tracking-wider hover:bg-menakta-secondarySecond/10 hover:border-menakta-primarySecond active:scale-95 transition-all duration-300 opacity-0 animate-[fadeInUp_0.6s_ease-out_1.4s_forwards]"
+            className="w-full sm:w-auto font-clash px-8 py-4 border border-menakta-primaryFirst/30 text-menakta-primarySecond rounded-full text-sm uppercase tracking-wider hover:bg-menakta-primaryFirst/10 hover:border-menakta-primarySecond hover:scale-105 active:scale-95 transition-all duration-300 opacity-0 animate-[fadeInUp_0.6s_ease-out_1.4s_forwards]"
           >
             Contact
           </button>

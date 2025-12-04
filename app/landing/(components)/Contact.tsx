@@ -243,7 +243,7 @@ export default function Contact() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full font-clash px-8 py-4 bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primarySecond/30 active:scale-[0.98] transition-all duration-300"
+                className="w-full font-clash px-8 py-4 bg-gradient-to-r from-menakta-primaryFirst to-purple-600 border border-transparent text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primaryFirst/30 hover:scale-105 active:scale-[0.98] transition-all duration-300"
               >
                 Send Message
               </button>
