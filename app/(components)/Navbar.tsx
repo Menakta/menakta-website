@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -13,6 +14,14 @@ const navLinks = [
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/" || pathname === "/landing";
+    }
+    return pathname.startsWith(href);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +38,7 @@ export default function Navbar() {
     <nav
       className={`
         fixed top-0 left-0 right-0 z-50 transition-all duration-500 
-        ${scrolled ? "bg-black/80 backdrop-blur-md shadow-lg" : "bg-transparent"}
+        ${scrolled ? "bg-gradient-to-br from-blue-900/95 via-purple-900/95 to-indigo-900/95 backdrop-blur-md shadow-lg" : "bg-transparent"}
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +56,11 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="font-clash text-menakta-secondarySecond hover:text-menakta-primarySecond transition-colors duration-300 text-sm uppercase tracking-wider"
+                className={`font-clash transition-colors duration-300 text-sm uppercase tracking-wider ${
+                  isActive(link.href)
+                    ? "text-menakta-primarySecond border-b-2 border-menakta-primarySecond pb-1"
+                    : "text-menakta-secondarySecond hover:text-menakta-primarySecond"
+                }`}
               >
                 {link.name}
               </Link>
@@ -81,7 +94,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`md:hidden absolute top-20 left-0 right-0 bg-menakta-secondaryFirst/95 backdrop-blur-md transition-all duration-300 ${
+        className={`md:hidden absolute top-20 left-0 right-0 bg-gradient-to-br from-blue-900/95 via-purple-900/95 to-indigo-900/95 backdrop-blur-md transition-all duration-300 ${
           isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
@@ -91,7 +104,11 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="block font-clash text-menakta-secondarySecond hover:text-menakta-primarySecond transition-colors duration-300 text-lg uppercase tracking-wider py-2"
+              className={`block font-clash transition-colors duration-300 text-lg uppercase tracking-wider py-2 ${
+                isActive(link.href)
+                  ? "text-menakta-primarySecond border-l-4 border-menakta-primarySecond pl-4"
+                  : "text-menakta-secondarySecond hover:text-menakta-primarySecond pl-4"
+              }`}
             >
               {link.name}
             </Link>

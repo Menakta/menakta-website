@@ -282,7 +282,7 @@ export default function ServicesPage() {
           </p>
           <a
             href="/landing#contact"
-            className={`inline-block font-clash px-10 py-4 bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primarySecond/30 active:scale-95 transition-all duration-300 ${
+            className={`inline-block font-clash px-10 py-4 bg-gradient-to-r from-menakta-primaryFirst to-purple-600 text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primarySecond/30 active:scale-95 transition-all duration-300 ${
               ctaVisible
                 ? "opacity-0 animate-[fadeInUp_0.6s_ease-out_0.5s_forwards]"
                 : "opacity-0 translate-y-10"

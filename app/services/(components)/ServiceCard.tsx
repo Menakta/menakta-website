@@ -20,7 +20,7 @@ export default function ServiceCard({
 
       <div className="relative z-10">
         {/* Icon */}
-        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-menakta-primaryFirst to-purple flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-menakta-primaryFirst to-purple-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
           {icon}
         </div>
 

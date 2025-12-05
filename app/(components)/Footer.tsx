@@ -98,7 +98,7 @@ export default function Footer() {
         <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-menakta-primarySecond/30 rounded-full animate-float-slow" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-20 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-10 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand & Tagline */}
@@ -122,11 +122,13 @@ export default function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 rounded-full border border-menakta-primaryFirst/40 flex items-center justify-center text-menakta-primarySecond hover:bg-menakta-primaryFirst hover:text-white hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300"
+                  className="group w-10 h-10 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/10 to-purple-600/10 flex items-center justify-center hover:from-menakta-primaryFirst hover:to-purple-600 hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300"
                   aria-label={social.name}
                   style={{ animationDelay: `${0.3 + index * 0.1}s` }}
                 >
-                  {social.icon}
+                  <span className="text-menakta-primarySecond group-hover:text-white transition-colors duration-300">
+                    {social.icon}
+                  </span>
                 </a>
               ))}
             </div>
@@ -275,7 +277,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="w-full font-clash px-6 py-3 bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond text-white rounded-lg text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primarySecond/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                className="w-full font-clash px-6 py-3 bg-gradient-to-r from-menakta-primaryFirst to-purple-600 text-white rounded-lg text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primarySecond/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
               >
                 Subscribe
               </button>
@@ -302,18 +304,22 @@ export default function Footer() {
             © {new Date().getFullYear()} Menakta. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a
-              href="#"
+            <Link href={"/privacy-policy"}>
+            <button
               className="font-clash text-[#D4E5FF]/60 text-sm hover:text-menakta-primarySecond transition-colors duration-300"
             >
               Privacy Policy
-            </a>
-            <a
-              href="#"
+            </button>
+            </Link>
+            <Link href={"/terms-of-service"}>
+              <button
+              
               className="font-clash text-[#D4E5FF]/60 text-sm hover:text-menakta-primarySecond transition-colors duration-300"
             >
               Terms of Service
-            </a>
+            </button>
+            </Link>
+          
           </div>
         </div>
       </div>

@@ -1,6 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const AnimatedCube = dynamic(() => import("@/app/(components)/AnimatedCube"), {
+  ssr: false,
+});
 
 export default function ServicesHero() {
   return (
@@ -139,6 +144,11 @@ export default function ServicesHero() {
 
         {/* Glow effect */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-32 bg-gradient-to-t from-menakta-primarySecond/20 via-purple-500/10 to-transparent blur-3xl" />
+      </div>
+
+      {/* 3D Animated Cube */}
+      <div className="absolute right-10 md:right-20 lg:right-32 top-1/2 -translate-y-1/2 z-[4] hidden md:block">
+        <AnimatedCube className="w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80" size={0.5} />
       </div>
 
       {/* Floating particles */}

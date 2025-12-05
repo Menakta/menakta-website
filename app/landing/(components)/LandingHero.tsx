@@ -1,5 +1,10 @@
 "use client";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const AnimatedCube = dynamic(() => import("@/app/(components)/AnimatedCube"), {
+  ssr: false,
+});
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -161,11 +166,16 @@ export default function Hero() {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-32 bg-gradient-to-t from-menakta-primarySecond/20 via-purple-500/10 to-transparent blur-3xl" />
       </div>
 
+      {/* 3D Animated Cube */}
+      <div className="absolute right-10 md:right-20 lg:right-32 top-1/2 -translate-y-1/2 z-[4]">
+        <AnimatedCube className="w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80" size={0.5} />
+      </div>
+
       {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[5]">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-menakta-primaryFirst/30 rounded-full animate-float-slow" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[9]">
+        <div className="absolute top-1/4 left-1/4 w-3 h-4 bg-gray-900 rounded-full animate-float-slow" />
         <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-blue-200/60 rounded-full animate-float-medium" />
-        <div className="absolute top-1/2 left-1/3 w-1.5 h-1.5 bg-menakta-primaryFirst/30 rounded-full animate-float-fast" />
+        <div className="absolute top-1/2 left-1/3 w-5 h-5 bg-blue rounded-full animate-float-fast" />
         <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-menakta-primarySecond/20 rounded-full animate-float-slow" />
         <div className="absolute top-1/4 right-1/5 w-1 h-1 bg-blue-400/40 rounded-full animate-float-medium" />
       </div>
