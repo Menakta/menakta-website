@@ -9,7 +9,7 @@ const projectsData = [
     title: "Nebula Quest VR",
     description:
       "An immersive virtual reality space exploration game built with Unreal Engine 5. Players navigate through procedurally generated galaxies, discover alien civilizations, and engage in epic space battles.",
-    image: "/images/project-1.jpg",
+    image: "/images/optimized/project-1.webp",
     category: "Game Development",
     technologies: ["Unreal Engine 5", "C++", "VR SDK", "Niagara FX"],
     link: "#",
@@ -18,7 +18,7 @@ const projectsData = [
     title: "SmartStock AI",
     description:
       "An intelligent inventory management system powered by machine learning. Predicts demand patterns, optimizes stock levels, and reduces waste by 40% for retail businesses.",
-    image: "/images/project-2.jpg",
+    image: "/images/optimized/project-2.webp",
     category: "AI Automation",
     technologies: ["Python", "TensorFlow", "AWS", "React"],
     link: "#",
@@ -27,7 +27,7 @@ const projectsData = [
     title: "FinanceHub Portal",
     description:
       "A comprehensive fintech web application featuring real-time trading dashboards, portfolio analytics, and secure transaction processing for over 50,000 active users.",
-    image: "/images/project-3.jpg",
+    image: "/images/optimized/project-3.webp",
     category: "Web Development",
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
     link: "#",
@@ -36,7 +36,7 @@ const projectsData = [
     title: "MetaShowroom XR",
     description:
       "A WebXR-powered virtual showroom allowing customers to view and customize products in 3D. Increased conversion rates by 65% for e-commerce clients.",
-    image: "/images/project-4.jpg",
+    image: "/images/optimized/project-4.webp",
     category: "Immersive Experience",
     technologies: ["Three.js", "WebXR", "GSAP", "Node.js"],
     link: "#",
@@ -45,7 +45,7 @@ const projectsData = [
     title: "CyberArena Mobile",
     description:
       "A competitive multiplayer mobile game featuring real-time PvP battles, seasonal tournaments, and a thriving esports community with 2 million+ downloads.",
-    image: "/images/project-5.jpg",
+    image: "/images/optimized/project-5.webp",
     category: "Game Development",
     technologies: ["Unity", "C#", "Photon", "Firebase"],
     link: "#",
@@ -54,7 +54,7 @@ const projectsData = [
     title: "DocuMind Assistant",
     description:
       "An AI-powered document processing solution that extracts, categorizes, and summarizes information from thousands of documents with 98% accuracy.",
-    image: "/images/project-6.jpg",
+    image: "/images/optimized/project-6.webp",
     category: "AI Automation",
     technologies: ["Python", "GPT-4", "LangChain", "FastAPI"],
     link: "#",
@@ -63,7 +63,7 @@ const projectsData = [
     title: "HealthSync Platform",
     description:
       "A HIPAA-compliant healthcare platform connecting patients with providers. Features telemedicine, appointment scheduling, and secure medical record management.",
-    image: "/images/project-2.jpg",
+    image: "/images/optimized/project-2.webp",
     category: "Web Development",
     technologies: ["React", "Node.js", "MongoDB", "WebRTC"],
     link: "#",
@@ -72,7 +72,7 @@ const projectsData = [
     title: "RoboGuide Interactive",
     description:
       "An interactive robotic installation for museum exhibits. Uses computer vision and NLP to provide personalized tours and answer visitor questions in real-time.",
-    image: "/images/project-1.jpg",
+    image: "/images/optimized/project-1.webp",
     category: "Robotics",
     technologies: ["ROS", "Python", "OpenCV", "Raspberry Pi"],
     link: "#",

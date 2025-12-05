@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -24,10 +26,14 @@ export default function ProjectCard({
 
       {/* Project Image */}
       <div className="relative h-56 overflow-hidden">
-        <img
+        <Image
           src={image}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover group-hover:scale-110 transition-transform duration-500"
+          placeholder="blur"
+          blurDataURL="data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoUAA0APm0qkUWkIqGYBABABsSgCdAEexO0oAAA/vPkn//Wf/1dv/q1b/+k5v/2av+1Q5MAn8AAAA=="
         />
         {/* Image overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent" />

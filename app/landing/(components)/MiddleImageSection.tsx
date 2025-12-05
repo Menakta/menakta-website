@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function MiddleImageSection() {
   const scrollToContact = () => {
@@ -12,10 +13,18 @@ export default function MiddleImageSection() {
   return (
     <section className="group relative p-20 px-6 md:px-20 bg-menakta-secondaryFirst flex items-center justify-center">
       {/* Background image with hover animation */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 scale-100"
-        style={{ backgroundImage: "url('/images/middle-section.jpg')" }}
-      />
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/optimized/middle-section.webp"
+          alt="Innovation section background"
+          fill
+          quality={80}
+          sizes="100vw"
+          className="object-cover object-center"
+          placeholder="blur"
+          blurDataURL="data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoUAA0APm0qkUWkIqGYBABABsSgCdAEexO0oAAA/vPkn//Wf/1dv/q1b/+k5v/2av+1Q5MAn8AAAA=="
+        />
+      </div>
 
       {/* Gradient overlay - blue, purple, transparent */}
       <div className="absolute inset-0 bg-gradient-to-br from-black-900/80 via-purple-900/70 to-transparent z-[1]" />

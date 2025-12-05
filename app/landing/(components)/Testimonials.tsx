@@ -6,7 +6,7 @@ import TestimonialCard from "./TestimonialCard";
 const testimonialData = [
   {
     name: "Sarah Chen",
-    avatar: "/images/testimonial-1.jpg",
+    avatar: "/images/optimized/testimonial-1.webp",
     role: "CTO",
     company: "TechVision Labs",
     testimonial:
@@ -15,7 +15,7 @@ const testimonialData = [
   {
     name: "Marcus Johnson",
     role: "Head of Innovation",
-    avatar: "/images/testimonial-2.jpg",
+    avatar: "/images/optimized/testimonial-2.webp",
     company: "RetailNext",
     testimonial:
       "The robotic installation Menakta created for our flagship store has become a landmark attraction. Customers genuinely connect with it, and it has revolutionized how we think about in-store experiences.",
@@ -24,7 +24,7 @@ const testimonialData = [
     name: "Elena Rodriguez",
     role: "Creative Director",
     company: "Immerse Studios",
-    avatar: "/images/testimonial-3.jpg",
+    avatar: "/images/optimized/testimonial-3.webp",
 
     testimonial:
       "Working with Menakta was a game-changer. Their team understood our vision immediately and delivered a WebXR experience that left our audience speechless. True innovators in the space.",
@@ -33,7 +33,7 @@ const testimonialData = [
     name: "David Park",
     role: "CEO",
     company: "FutureBuild Inc",
-    avatar: "/images/testimonial-2.jpg",
+    avatar: "/images/optimized/testimonial-2.webp",
     testimonial:
       "The simulation platform Menakta built for our training program reduced onboarding time by 60%. It feels so real that our employees forget they're in a virtual environment.",
   },
@@ -41,7 +41,7 @@ const testimonialData = [
     name: "Aisha Patel",
     role: "VP of Digital",
     company: "GlobalConnect",
-    avatar: "/images/testimonial-1.jpg",
+    avatar: "/images/optimized/testimonial-1.webp",
     testimonial:
       "Menakta doesn't just build technology; they craft experiences. Their attention to the emotional connection between users and technology sets them apart from everyone else in the industry.",
   },

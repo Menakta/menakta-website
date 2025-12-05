@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface TestimonialCardProps {
   name: string;
   role: string;
@@ -28,12 +30,16 @@ export default function TestimonialCard({
       {/* Author Info */}
       <div className="group flex items-center gap-4 cursor-pointer">
         {/* Avatar */}
-        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 group-hover:from-menakta-primaryFirst group-hover:to-purple-600 group-hover:scale-110 transition-all duration-300 flex items-center justify-center text-menakta-primarySecond group-hover:text-white font-tusker text-xl overflow-hidden">
+        <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 group-hover:from-menakta-primaryFirst group-hover:to-purple-600 group-hover:scale-110 transition-all duration-300 flex items-center justify-center text-menakta-primarySecond group-hover:text-white font-tusker text-xl overflow-hidden">
           {avatar ? (
-            <img
+            <Image
               src={avatar}
               alt={name}
-              className="w-full h-full rounded-full object-cover"
+              fill
+              sizes="56px"
+              className="rounded-full object-cover"
+              placeholder="blur"
+              blurDataURL="data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoUAA0APm0qkUWkIqGYBABABsSgCdAEexO0oAAA/vPkn//Wf/1dv/q1b/+k5v/2av+1Q5MAn8AAAA=="
             />
           ) : (
             name.charAt(0).toUpperCase()

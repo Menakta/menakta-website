@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 
 const AnimatedCube = dynamic(() => import("@/app/(components)/AnimatedCube"), {
@@ -21,10 +22,19 @@ export default function Hero() {
   return (
     <section className="group relative min-h-screen bg-menakta-secondaryFirst overflow-hidden flex items-center justify-center">
       {/* Background image with hover animation */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 scale-100 group-hover:scale-110 transition-transform duration-700 ease-out"
-        style={{ backgroundImage: "url('/images/landingHero.jpg')" }}
-      />
+      <div className="absolute inset-0 z-0 scale-100 group-hover:scale-110 transition-transform duration-700 ease-out">
+        <Image
+          src="/images/optimized/landingHero.webp"
+          alt="Landing hero background"
+          fill
+          priority
+          quality={80}
+          sizes="100vw"
+          className="object-cover object-center"
+          placeholder="blur"
+          blurDataURL="data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoUAA0APm0qkUWkIqGYBABABsSgCdAEexO0oAAA/vPkn//Wf/1dv/q1b/+k5v/2av+1Q5MAn8AAAA=="
+        />
+      </div>
 
       {/* Gradient overlay - blue, purple, transparent */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-purple-900/70 to-transparent z-[1]" />
