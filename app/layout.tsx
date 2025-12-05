@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${bebasNeue.variable} ${spaceGrotesk.variable} antialiased bg-black`}
       >
         <Navbar/>
         {children}
