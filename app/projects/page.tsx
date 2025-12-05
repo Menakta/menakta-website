@@ -125,7 +125,7 @@ export default function ProjectsPage() {
       {/* Projects Grid Section */}
       <section
         ref={sectionRef}
-        className="w-full min-h-screen py-24 px-6 md:px-20 bg-gradient-to-b from-menakta-secondaryFirst via-[#0a1525] to-menakta-secondaryFirst text-white relative overflow-hidden"
+        className="w-full min-h-screen py-24 md:px-20 bg-gradient-to-b from-menakta-secondaryFirst via-[#0a1525] to-menakta-secondaryFirst text-white relative overflow-hidden"
       >
         {/* Background Gradient Orbs */}
         <div className="absolute top-40 left-10 w-72 h-72 bg-menakta-primaryFirst/10 rounded-full blur-[120px]" />
