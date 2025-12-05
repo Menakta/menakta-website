@@ -7,6 +7,10 @@ const AnimatedCube = dynamic(() => import("@/app/(components)/AnimatedCube"), {
   ssr: false,
 });
 
+const AnimatedStar = dynamic(() => import("@/app/(components)/AnimatedStar"), {
+  ssr: false,
+});
+
 export default function ProjectsHero() {
   return (
     <section className="group relative min-h-screen bg-menakta-secondaryFirst overflow-hidden flex items-center justify-center">
@@ -149,6 +153,11 @@ export default function ProjectsHero() {
       {/* 3D Animated Cube */}
       <div className="absolute right-10 md:right-20 lg:right-32 top-1/2 -translate-y-1/2 z-[4]">
         <AnimatedCube className="w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80" size={0.5} />
+      </div>
+
+      {/* 3D Animated Star */}
+      <div className="absolute left-10 md:left-20 lg:left-32 top-1/3 -translate-y-1/2 z-[4]">
+        <AnimatedStar className="w-32 h-32 lg:w-48 lg:h-48 xl:w-56 xl:h-56" size={0.8} />
       </div>
 
       {/* Floating particles */}

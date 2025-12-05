@@ -25,7 +25,7 @@ export default function Message() {
     };
   }, []);
   return (
-   <section ref={ref} className="w-full py-32 px-8 bg-gradient-to-b from-black via-[#001845] to-[#2D0A4E] text-white relative overflow-hidden">
+   <section ref={ref} className="w-full py-32 md:px-20 px-2 bg-gradient-to-b from-black via-[#001845] to-[#2D0A4E] text-white relative overflow-hidden">
 
   {/* TITLE */}
   <h2 className={`font-tusker text-center text-6xl md:text-7xl tracking-tight mb-16 ${isVisible ? "translate-y-0 opacity-0 animate-[fadeInUp_0.3s_ease-out_0.6s_forwards]":""}`}>
@@ -37,7 +37,7 @@ export default function Message() {
 
     {/* Actual Card */}
     <div className={`relative rounded-full border border-menakta-primaryFirst/40 bg-transparent backdrop-blur-xl px-10 py-12 shadow-xl`}>
-    <p className={`font-clash text-center text-lg leading-relaxed text-[#D4E5FF] ${isVisible ? "leading-relaxed opacity-0 animate-[fadeIn_0.6s_ease-out_0.9s_forwards] translate-y-0":""}`}>
+    <p className={`font-clash text-center text-sm md:text-lg leading-relaxed text-[#D4E5FF] ${isVisible ? "leading-relaxed opacity-0 animate-[fadeIn_0.6s_ease-out_0.9s_forwards] translate-y-0":""}`}>
         Menakta bridges the gap between cold automation and meaningful experience by
         creating AI-driven 3D worlds, simulations, and robotics that think, move, and connect
         like people.

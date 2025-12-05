@@ -63,7 +63,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="w-full h-[100vh] py-32 px-8 bg-gradient-to-t from-black via-[#001845] to-[#2D0A4E] text-white relative overflow-hidden text-white relative">
+    <section className="w-full h-[100vh] py-32 md:px-20 px-2 bg-gradient-to-t from-black via-[#001845] to-[#2D0A4E] text-white relative overflow-hidden text-white relative">
       {/* Animated Gradient Circle Background */}
 
       {/* Title */}

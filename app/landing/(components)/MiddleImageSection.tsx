@@ -10,7 +10,7 @@ export default function MiddleImageSection() {
   };
 
   return (
-    <section className="group relative p-20 bg-menakta-secondaryFirst flex items-center justify-center">
+    <section className="group relative p-20 px-6 md:px-20 bg-menakta-secondaryFirst flex items-center justify-center">
       {/* Background image with hover animation */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 scale-100"

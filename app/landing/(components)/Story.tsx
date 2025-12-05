@@ -26,7 +26,7 @@ export default function Story() {
   return (
     <section
       ref={ref}
-      className="w-full py-24 px-6 md:px-20 bg-menakta-secondaryFirst text-white"
+      className="w-full py-24 md:px-20 bg-menakta-secondaryFirst text-white"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center px-8">
 

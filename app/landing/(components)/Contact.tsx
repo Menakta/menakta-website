@@ -25,7 +25,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full min-h-screen py-24 px-6 md:px-20 bg-menakta-secondaryFirst text-white relative overflow-hidden"
+      className="w-full min-h-screen py-24 md:px-20 bg-menakta-secondaryFirst text-white relative overflow-hidden"
     >
       {/* Background Gradient Orbs */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-menakta-primaryFirst/20 rounded-full blur-[120px]" />
