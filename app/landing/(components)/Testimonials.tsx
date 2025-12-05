@@ -63,11 +63,11 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="w-full h-[100vh] py-32 md:px-20 px-2 bg-gradient-to-t from-black via-[#001845] to-[#2D0A4E] text-white relative overflow-hidden text-white relative">
+    <section className="w-full min-h-screen py-16 md:py-32 md:px-20 px-2 bg-gradient-to-t from-black via-[#001845] to-[#2D0A4E] text-white relative overflow-visible">
       {/* Animated Gradient Circle Background */}
 
       {/* Title */}
-      <h2 className="font-tusker text-center text-6xl md:text-7xl tracking-tight mb-16">
+      <h2 className="font-tusker text-center text-4xl sm:text-6xl md:text-7xl tracking-tight mb-8 md:mb-16">
         WHAT THEY SAY
       </h2>
 
