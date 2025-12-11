@@ -60,7 +60,7 @@ export default function ProjectsHero() {
             </button>
           </Link>
           <Link href="/services" className="w-full sm:w-auto">
-            <button className="w-full sm:w-auto font-clash px-8 py-4 border border-menakta-primaryFirst/30 text-menakta-primarySecond rounded-full text-sm uppercase tracking-wider hover:bg-menakta-primaryFirst/10 hover:border-menakta-primarySecond hover:scale-105 active:scale-95 transition-all duration-300 opacity-0 animate-[fadeInUp_0.6s_ease-out_1.4s_forwards]">
+            <button className="w-full sm:w-auto font-clash px-8 py-4 border border-white/30 text-white rounded-full text-sm uppercase tracking-wider hover:bg-white/10 hover:border-white hover:scale-105 active:scale-95 transition-all duration-300 opacity-0 animate-[fadeInUp_0.6s_ease-out_1.4s_forwards]">
               Our Services
             </button>
           </Link>
