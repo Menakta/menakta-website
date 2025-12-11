@@ -109,7 +109,7 @@ export default function Values() {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-24 md:px-20 bg-menakta-secondaryFirst text-white relative overflow-hidden"
+      className="w-full py-24 md:px-20 relative overflow-hidden transition-colors duration-300 bg-theme-bg-secondary text-theme-text-primary"
     >
       {/* Background Gradient Orbs */}
       <div className="absolute top-1/4 left-0 w-80 h-80 bg-menakta-primarySecond/10 rounded-full blur-[150px]" />
@@ -124,11 +124,11 @@ export default function Values() {
               : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="font-tusker text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6">
+          <h2 className="font-tusker text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6 text-theme-text-primary">
             OUR{" "}
             <span className="text-menakta-primarySecond">VALUES</span>
           </h2>
-          <p className="font-clash text-[#D4E5FF] text-lg max-w-2xl mx-auto">
+          <p className="font-clash text-lg max-w-2xl mx-auto text-theme-text-secondary">
             The principles that guide everything we do
           </p>
         </div>
@@ -147,17 +147,17 @@ export default function Values() {
                 animationDelay: isVisible ? `${0.2 + index * 0.1}s` : "0s",
               }}
             >
-              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-menakta-primaryFirst/10 to-menakta-primarySecond/10 border border-menakta-primaryFirst/20 hover:border-menakta-primarySecond/50 transition-all duration-300 hover:scale-105">
+              <div className="h-full p-8 rounded-2xl border border-theme-border transition-all duration-300 hover:scale-105 bg-theme-card-bg hover:border-menakta-primarySecond/50">
                 {/* Icon */}
                 <div className="w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-menakta-primaryFirst to-menakta-primarySecond flex items-center justify-center text-white">
                   {value.icon}
                 </div>
 
                 {/* Content */}
-                <h3 className="font-tusker text-2xl text-white mb-3">
+                <h3 className="font-tusker text-2xl mb-3 text-theme-text-primary">
                   {value.title}
                 </h3>
-                <p className="font-clash text-[#D4E5FF] text-sm leading-relaxed">
+                <p className="font-clash text-sm leading-relaxed text-theme-text-secondary">
                   {value.description}
                 </p>
               </div>

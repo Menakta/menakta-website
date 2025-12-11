@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AboutHero() {
   return (
-    <section className="group relative min-h-screen bg-menakta-secondaryFirst overflow-hidden flex items-center justify-center">
+    <section className="group relative min-h-screen overflow-hidden flex items-center justify-center transition-colors duration-300 bg-theme-bg-primary">
       {/* Background image with hover animation */}
       <div className="absolute inset-0 z-0 scale-100 group-hover:scale-110 transition-transform duration-700 ease-out">
         <Image
@@ -22,12 +22,12 @@ export default function AboutHero() {
       </div>
 
       {/* Gradient overlay - blue, purple, transparent */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#001845]/80 via-[#002060]/70 to-transparent z-[1]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-menakta-secondaryFirst via-transparent to-transparent z-[2]" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-menakta-primaryFirst/60 via-menakta-primarySecond/40 to-transparent" />
+      <div className="absolute inset-0 z-[2] bg-gradient-to-t from-theme-bg-primary via-transparent to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="font-tusker text-4xl text-menakta-secondarySecond uppercase tracking-tight leading-none mb-6">
+        <h1 className="font-tusker text-4xl uppercase tracking-tight leading-none mb-6 text-white">
           <span className="inline-block opacity-0 animate-[fadeInUp_0.6s_ease-out_0.1s_forwards]">
             Get
           </span>{" "}
@@ -47,7 +47,7 @@ export default function AboutHero() {
           </span>
         </h1>
 
-        <p className="font-clash text-menakta-secondarySecond/70 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed opacity-0 animate-[fadeIn_0.8s_ease-out_1s_forwards]">
+        <p className="font-clash text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed opacity-0 animate-[fadeIn_0.8s_ease-out_1s_forwards] text-white/80">
           We are a team of passionate innovators, engineers, and designers
           dedicated to creating technology that connects, inspires, and
           transforms.

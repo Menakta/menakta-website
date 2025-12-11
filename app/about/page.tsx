@@ -8,7 +8,7 @@ import Team from "./(components)/Team";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-menakta-secondaryFirst text-white">
+    <main className="min-h-screen transition-colors duration-300 bg-theme-bg-primary text-theme-text-primary">
       <AboutHero />
       <Mission />
       <Stats />
@@ -16,15 +16,15 @@ export default function AboutPage() {
       <Team />
 
       {/* CTA Section */}
-      <section className="w-full py-24 px-4 md:px-20 bg-gradient-to-t from-black via-[#001845] to-menakta-secondaryFirst text-white relative overflow-hidden">
+      <section className="w-full py-24 px-4 md:px-20 relative overflow-hidden transition-colors duration-300 bg-theme-bg-tertiary text-theme-text-primary">
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-5" />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="font-tusker text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
+          <h2 className="font-tusker text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6 text-theme-text-primary">
             READY TO{" "}
             <span className="text-menakta-primarySecond">COLLABORATE?</span>
           </h2>
-          <p className="font-clash text-[#D4E5FF] text-lg mb-10 max-w-2xl mx-auto">
+          <p className="font-clash text-lg mb-10 max-w-2xl mx-auto text-theme-text-secondary">
             Let&apos;s create something extraordinary together. Our team is ready
             to bring your vision to life.
           </p>

@@ -18,12 +18,12 @@ export default function TestimonialCard({
   avatar,
 }: TestimonialCardProps) {
   return (
-    <div className="bg-gradient-to-br from-[#0a1628] to-[#001845] border border-menakta-primaryFirst/30 rounded-2xl p-8 md:p-10 max-w-2xl mx-auto">
+    <div className="border border-theme-border rounded-2xl p-8 md:p-10 max-w-2xl mx-auto transition-colors duration-300 bg-theme-card-bg">
       {/* Quote Icon */}
       <div className="text-menakta-primaryFirst text-5xl font-serif mb-4">"</div>
 
       {/* Testimonial Text */}
-      <p className="font-clash text-lg md:text-xl text-[#D4E5FF] leading-relaxed mb-8">
+      <p className="font-clash text-lg md:text-xl leading-relaxed mb-8 text-theme-text-secondary">
         {testimonial}
       </p>
 
@@ -48,8 +48,8 @@ export default function TestimonialCard({
 
         {/* Name and Role */}
         <div>
-          <h4 className="font-tusker text-white text-lg group-hover:text-menakta-primarySecond transition-colors duration-300">{name}</h4>
-          <p className="font-clash text-menakta-primarySecond text-sm group-hover:text-white transition-colors duration-300">
+          <h4 className="font-tusker text-lg group-hover:text-menakta-primarySecond transition-colors duration-300 text-theme-text-primary">{name}</h4>
+          <p className="font-clash text-menakta-primarySecond text-sm transition-colors duration-300 group-hover:text-menakta-primaryFirst">
             {role} at {company}
           </p>
         </div>

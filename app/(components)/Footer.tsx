@@ -3,13 +3,15 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { useTheme } from "../context/ThemeContext";
+// Note: useTheme still needed for logo switching
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Landing", href: "/landing" },
   { name: "Services", href: "/services" },
   { name: "Projects", href: "/projects" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/landing#contact" },
+  { name: "Careers", href: "/careers" },
 ];
 
 const socialLinks = [
@@ -54,6 +56,7 @@ const socialLinks = [
 export default function Footer() {
   const footerRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const { isDark } = useTheme();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -75,7 +78,7 @@ export default function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="relative w-full bg-gradient-to-b from-black via-[#001845] to-[#002060] text-white overflow-hidden"
+      className="relative w-full overflow-hidden transition-colors duration-300 bg-gradient-to-b from-theme-bg-primary via-theme-bg-secondary to-theme-bg-tertiary text-theme-text-primary"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -112,7 +115,7 @@ export default function Footer() {
             <Link href={'/'}>
             <h2 className="mb-4 duration-300">
             <Image
-              src="/logos/Menakta_White_Logo_2.png"
+              src={isDark ? "/logos/Menakta_White_Logo_2.png" : "/logos/Menakta_Black_Logo.png"}
               alt="Menakta Logo"
               width={200}
               height={200}
@@ -120,7 +123,7 @@ export default function Footer() {
             </h2>
             </Link>
             
-            <p className="font-clash text-[#D4E5FF] text-sm leading-relaxed mb-6">
+            <p className="font-clash text-sm leading-relaxed mb-6 text-theme-text-secondary">
               Engineering the future of digital experiences. We create
               technology that feels alive, responsive, and deeply human.
             </p>
@@ -150,13 +153,13 @@ export default function Footer() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h3 className="font-tusker text-xl text-white mb-6">QUICK LINKS</h3>
+            <h3 className="font-tusker text-xl mb-6 text-theme-text-primary">QUICK LINKS</h3>
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="font-clash text-[#D4E5FF] hover:text-menakta-primarySecond hover:pl-2 transition-all duration-300 inline-block"
+                    className="font-clash hover:text-menakta-primarySecond hover:pl-2 transition-all duration-300 inline-block text-theme-text-secondary"
                   >
                     {link.name}
                   </Link>
@@ -173,7 +176,7 @@ export default function Footer() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h3 className="font-tusker text-xl text-white mb-6">CONTACT US</h3>
+            <h3 className="font-tusker text-xl mb-6 text-theme-text-primary">CONTACT US</h3>
             <ul className="space-y-4">
               {/* Email */}
               <li className="group flex items-start gap-3">
@@ -193,18 +196,18 @@ export default function Footer() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-clash text-white text-sm">Email</p>
+                  <p className="font-clash text-sm text-theme-text-primary">Email</p>
                   <a
                     href="mailto:hello@menakta.com"
-                    className="font-clash text-menakta-primarySecond text-sm hover:text-white transition-colors duration-300"
+                    className="font-clash text-menakta-primarySecond text-sm transition-colors duration-300 hover:text-menakta-primaryFirst"
                   >
-                    hello@menakta.com
+                    ammad@menakta.com
                   </a>
                 </div>
               </li>
 
               {/* Phone */}
-              <li className="group flex items-start gap-3">
+              {/* <li className="group flex items-start gap-3">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 flex items-center justify-center group-hover:from-menakta-primaryFirst group-hover:to-menakta-primarySecond transition-all duration-300">
                   <svg
                     className="w-4 h-4 text-menakta-primarySecond group-hover:text-white transition-colors duration-300"
@@ -221,15 +224,15 @@ export default function Footer() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-clash text-white text-sm">Phone</p>
+                  <p className={`font-clash text-sm ${isDark ? "text-white" : "text-gray-900"}`}>Phone</p>
                   <a
                     href="tel:+1234567890"
-                    className="font-clash text-menakta-primarySecond text-sm hover:text-white transition-colors duration-300"
+                    className={`font-clash text-menakta-primarySecond text-sm transition-colors duration-300 ${isDark ? "hover:text-white" : "hover:text-menakta-primaryFirst"}`}
                   >
                     +1 (234) 567-890
                   </a>
                 </div>
-              </li>
+              </li> */}
 
               {/* Location */}
               <li className="group flex items-start gap-3">
@@ -254,7 +257,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-clash text-white text-sm">Location</p>
+                  <p className="font-clash text-sm text-theme-text-primary">Location</p>
                   <p className="font-clash text-menakta-primarySecond text-sm">
                     Global / Remote First
                   </p>
@@ -271,17 +274,17 @@ export default function Footer() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h3 className="font-tusker text-xl text-white mb-6">
+            <h3 className="font-tusker text-xl mb-6 text-theme-text-primary">
               STAY UPDATED
             </h3>
-            <p className="font-clash text-[#D4E5FF] text-sm mb-4">
+            <p className="font-clash text-sm mb-4 text-theme-text-secondary">
               Subscribe to our newsletter for the latest updates and insights.
             </p>
             <form className="space-y-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-3 bg-white/5 border border-menakta-primaryFirst/30 rounded-lg font-clash text-white text-sm placeholder-white/40 focus:outline-none focus:border-menakta-primarySecond focus:bg-white/10 transition-all duration-300"
+                className="w-full px-4 py-3 border border-theme-border rounded-lg font-clash text-sm focus:outline-none focus:border-menakta-primarySecond transition-all duration-300 bg-theme-card-bg text-theme-text-primary placeholder-theme-text-muted"
               />
               <button
                 type="submit"
@@ -308,21 +311,20 @@ export default function Footer() {
               : "opacity-0"
           }`}
         >
-          <p className="font-clash text-[#D4E5FF]/60 text-sm text-center md:text-left">
+          <p className="font-clash text-sm text-center md:text-left text-theme-text-muted">
             © {new Date().getFullYear()} Menakta. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href={"/privacy-policy"}>
             <button
-              className="font-clash text-[#D4E5FF]/60 text-sm hover:text-menakta-primarySecond transition-colors duration-300"
+              className="font-clash text-sm hover:text-menakta-primarySecond transition-colors duration-300 text-theme-text-muted"
             >
               Privacy Policy
             </button>
             </Link>
             <Link href={"/terms-of-service"}>
               <button
-              
-              className="font-clash text-[#D4E5FF]/60 text-sm hover:text-menakta-primarySecond transition-colors duration-300"
+              className="font-clash text-sm hover:text-menakta-primarySecond transition-colors duration-300 text-theme-text-muted"
             >
               Terms of Service
             </button>

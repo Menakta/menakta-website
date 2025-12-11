@@ -53,7 +53,7 @@ export default function Team() {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-24 md:px-20 bg-gradient-to-b from-menakta-secondaryFirst via-[#0a1525] to-menakta-secondaryFirst text-white relative overflow-hidden"
+      className="w-full py-24 md:px-20 relative overflow-hidden transition-colors duration-300 bg-gradient-to-b from-theme-bg-primary via-theme-bg-secondary to-theme-bg-primary text-theme-text-primary"
     >
       {/* Background Gradient Orbs */}
       <div className="absolute top-40 left-10 w-72 h-72 bg-menakta-primaryFirst/10 rounded-full blur-[120px]" />
@@ -68,11 +68,11 @@ export default function Team() {
               : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="font-tusker text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6">
+          <h2 className="font-tusker text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6 text-theme-text-primary">
             MEET THE{" "}
             <span className="text-menakta-primarySecond">TEAM</span>
           </h2>
-          <p className="font-clash text-[#D4E5FF] text-lg max-w-2xl mx-auto">
+          <p className="font-clash text-lg max-w-2xl mx-auto text-theme-text-secondary">
             The brilliant minds behind Menakta&apos;s innovative solutions
           </p>
         </div>
@@ -91,7 +91,7 @@ export default function Team() {
                 animationDelay: isVisible ? `${0.2 + index * 0.1}s` : "0s",
               }}
             >
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 border border-menakta-primaryFirst/20 p-6 hover:border-menakta-primarySecond/50 transition-all duration-300 hover:scale-105">
+              <div className="relative overflow-hidden rounded-2xl border border-theme-border p-6 transition-all duration-300 hover:scale-105 bg-theme-card-bg hover:border-menakta-primarySecond/50">
                 {/* Avatar Placeholder */}
                 <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-menakta-primaryFirst to-menakta-primarySecond flex items-center justify-center overflow-hidden">
                   <span className="font-tusker text-4xl text-white">
@@ -101,13 +101,13 @@ export default function Team() {
 
                 {/* Member Info */}
                 <div className="text-center">
-                  <h3 className="font-tusker text-xl text-white mb-1">
+                  <h3 className="font-tusker text-xl mb-1 text-theme-text-primary">
                     {member.name}
                   </h3>
                   <p className="font-clash text-menakta-primarySecond text-sm uppercase tracking-wider mb-3">
                     {member.role}
                   </p>
-                  <p className="font-clash text-[#D4E5FF] text-sm">
+                  <p className="font-clash text-sm text-theme-text-secondary">
                     {member.description}
                   </p>
                 </div>

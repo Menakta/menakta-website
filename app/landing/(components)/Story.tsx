@@ -26,7 +26,7 @@ export default function Story() {
   return (
     <section
       ref={ref}
-      className="w-full py-24 md:px-20 bg-menakta-secondaryFirst text-white"
+      className="w-full py-24 md:px-20 transition-colors duration-300 bg-theme-bg-primary text-theme-text-primary"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center px-8">
 
@@ -55,35 +55,35 @@ export default function Story() {
             ${isVisible ? "leading-relaxed opacity-0 animate-[fadeIn_0.6s_ease-out_0.9s_forwards] translate-y-0" : ""}
           `}
         >
-          <p className="text-[#D4E5FF]">
-            Most technologies work fast, but they don’t truly connect.
+          <p className="text-theme-text-secondary">
+            Most technologies work fast, but they don't truly connect.
             <br />
-            <span className="font-semibold text-white">
+            <span className="font-semibold text-theme-text-primary">
               Menakta was created to change that, to bring emotion and intelligence together in one experience.
             </span>{" "}
             Our mission is simple: to make technology that feels alive, responsive, intuitive, and deeply human.
           </p>
 
-          <p className="text-[#D4E5FF]">
+          <p className="text-theme-text-secondary">
             Built by a collective of engineers, designers, and storytellers,{" "}
-            <span className="font-semibold text-white">
+            <span className="font-semibold text-theme-text-primary">
               Menakta brings AI, Unreal Engine, WebXR, and robotics together
             </span>{" "}
             to create digital ecosystems that think and move like living systems.
           </p>
 
-          <p className="text-[#D4E5FF]">
-            From immersive 3D simulations to robots in shopping malls that greet, chat, and interact with people like friends, 
+          <p className="text-theme-text-secondary">
+            From immersive 3D simulations to robots in shopping malls that greet, chat, and interact with people like friends,
             every creation is designed to make technology not just useful but memorable.
           </p>
 
-          <p className="text-[#D4E5FF]">
+          <p className="text-theme-text-secondary">
             With{" "}
-            <span className="font-semibold text-white">20+ projects delivered, a 99% success rate,</span> 
-            and a growing network of global partners, we’re building the next generation of human-centered innovation.
-            Because the future isn’t just about smarter machines;
-            it’s about technology that{" "}
-            <span className="font-semibold text-white">feels, learns, and connects.</span>
+            <span className="font-semibold text-theme-text-primary">20+ projects delivered, a 99% success rate,</span>
+            and a growing network of global partners, we're building the next generation of human-centered innovation.
+            Because the future isn't just about smarter machines;
+            it's about technology that{" "}
+            <span className="font-semibold text-theme-text-primary">feels, learns, and connects.</span>
           </p>
         </div>
       </div>

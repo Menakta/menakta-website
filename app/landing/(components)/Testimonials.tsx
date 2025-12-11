@@ -63,7 +63,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="w-full min-h-screen py-16 md:py-32 md:px-20 px-2 bg-gradient-to-t from-black via-[#001845] to-[#002060] text-white relative overflow-visible">
+    <section className="w-full min-h-screen py-16 md:py-32 md:px-20 px-2 relative overflow-visible transition-colors duration-300 bg-gradient-to-t from-theme-bg-tertiary via-theme-bg-secondary to-theme-bg-primary text-theme-text-primary">
       {/* Animated Gradient Circle Background */}
 
       {/* Title */}
@@ -135,7 +135,7 @@ export default function Testimonials() {
               className={`w-2 h-2 rounded-full transition-all ${
                 index === currentIndex
                   ? "bg-menakta-primaryFirst w-6"
-                  : "bg-white/30 hover:bg-white/50"
+                  : "bg-theme-text-muted hover:bg-theme-text-secondary"
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
             />

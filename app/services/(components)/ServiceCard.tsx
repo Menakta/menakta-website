@@ -14,7 +14,7 @@ export default function ServiceCard({
   features,
 }: ServiceCardProps) {
   return (
-    <div className="group relative bg-gradient-to-br from-[#0a1628]/80 to-[#001845]/80 border border-menakta-primaryFirst/30 rounded-2xl p-8 backdrop-blur-sm hover:border-menakta-primarySecond/50 transition-all duration-300 hover:shadow-lg hover:shadow-menakta-primaryFirst/10">
+    <div className="group relative border border-theme-border rounded-2xl p-8 backdrop-blur-sm transition-all duration-300 hover:shadow-lg bg-theme-card-bg hover:border-menakta-primarySecond/50 hover:shadow-menakta-primaryFirst/10">
       {/* Glow effect on hover */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-menakta-primaryFirst/5 to-menakta-primarySecond/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -25,10 +25,10 @@ export default function ServiceCard({
         </div>
 
         {/* Title */}
-        <h3 className="font-tusker text-2xl text-white mb-4">{title}</h3>
+        <h3 className="font-tusker text-2xl mb-4 text-theme-text-primary">{title}</h3>
 
         {/* Description */}
-        <p className="font-clash text-[#D4E5FF] leading-relaxed mb-6">
+        <p className="font-clash leading-relaxed mb-6 text-theme-text-secondary">
           {description}
         </p>
 
@@ -49,7 +49,7 @@ export default function ServiceCard({
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span className="font-clash text-white/80 text-sm">{feature}</span>
+              <span className="font-clash text-sm text-theme-text-muted">{feature}</span>
             </li>
           ))}
         </ul>

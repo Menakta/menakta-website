@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "./(components)/Navbar";
 import Footer from "./(components)/Footer";
 import SplashScreen from "./(components)/SplashScreen";
+import { ThemeProvider } from "./context/ThemeContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Menakta Tech - We build software that makes a difference',
   icons: {
     icon: '/logos/Menakta_Favicon.png',
-    apple: '/logos/Menakta_Favicon.png', 
+    apple: '/logos/Menakta_Favicon.png',
   },
 };
 
@@ -19,12 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased bg-black">
-        <SplashScreen />
-        <Navbar/>
-        {children}
-        <Footer/>
+    <html lang="en" suppressHydrationWarning>
+      <body className="antialiased bg-theme-bg-primary transition-colors duration-300">
+        <ThemeProvider>
+          <SplashScreen />
+          <Navbar/>
+          {children}
+          <Footer/>
+        </ThemeProvider>
       </body>
     </html>
   );

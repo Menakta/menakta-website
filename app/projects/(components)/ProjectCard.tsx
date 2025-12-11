@@ -20,7 +20,7 @@ export default function ProjectCard({
   link,
 }: ProjectCardProps) {
   return (
-    <div className="group relative bg-gradient-to-br from-[#0a1628]/80 to-[#001845]/80 border border-menakta-primaryFirst/30 rounded-2xl overflow-hidden backdrop-blur-sm hover:border-menakta-primarySecond/50 transition-all duration-300 hover:shadow-lg hover:shadow-menakta-primaryFirst/10">
+    <div className="group relative border border-theme-border rounded-2xl overflow-hidden backdrop-blur-sm transition-all duration-300 hover:shadow-lg bg-theme-card-bg hover:border-menakta-primarySecond/50 hover:shadow-menakta-primaryFirst/10">
       {/* Glow effect on hover */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-menakta-primaryFirst/5 to-menakta-primarySecond/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -36,7 +36,7 @@ export default function ProjectCard({
           blurDataURL="data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoUAA0APm0qkUWkIqGYBABABsSgCdAEexO0oAAA/vPkn//Wf/1dv/q1b/+k5v/2av+1Q5MAn8AAAA=="
         />
         {/* Image overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-theme-bg-primary via-transparent to-transparent" />
 
         {/* Category badge */}
         <div className="absolute top-4 left-4 z-10">
@@ -73,12 +73,12 @@ export default function ProjectCard({
       {/* Content */}
       <div className="relative z-10 p-6">
         {/* Title */}
-        <h3 className="font-tusker text-2xl text-white mb-3 group-hover:text-menakta-primarySecond transition-colors duration-300">
+        <h3 className="font-tusker text-2xl mb-3 group-hover:text-menakta-primarySecond transition-colors duration-300 text-theme-text-primary">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="font-clash text-[#D4E5FF] leading-relaxed mb-5 text-sm">
+        <p className="font-clash leading-relaxed mb-5 text-sm text-theme-text-secondary">
           {description}
         </p>
 
@@ -87,7 +87,7 @@ export default function ProjectCard({
           {technologies.map((tech, index) => (
             <span
               key={index}
-              className="font-clash text-xs px-3 py-1 bg-menakta-primaryFirst/10 border border-menakta-primaryFirst/30 text-menakta-primarySecond rounded-full hover:bg-menakta-primaryFirst/20 transition-colors duration-300"
+              className="font-clash text-xs px-3 py-1 border border-theme-border text-menakta-primarySecond rounded-full transition-colors duration-300 bg-menakta-primaryFirst/10 hover:bg-menakta-primaryFirst/20"
             >
               {tech}
             </span>

@@ -199,12 +199,12 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-menakta-secondaryFirst text-white">
+    <main className="min-h-screen transition-colors duration-300 bg-theme-bg-primary text-theme-text-primary">
       {/* Hero Section */}
       <ServicesHero />
 
       {/* Services Grid */}
-      <section ref={servicesRef} className="py-16 md:px-20 relative overflow-hidden">
+      <section ref={servicesRef} className="py-16 md:px-20 relative overflow-hidden bg-theme-bg-secondary">
         {/* Background Gradient Orbs */}
         <div className="absolute top-1/4 left-0 w-80 h-80 bg-menakta-primaryFirst/10 rounded-full blur-[150px]" />
         <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-menakta-primarySecond/10 rounded-full blur-[150px]" />
@@ -218,10 +218,10 @@ export default function ServicesPage() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="font-tusker text-4xl md:text-5xl tracking-tight mb-4">
+            <h2 className="font-tusker text-4xl md:text-5xl tracking-tight mb-4 text-theme-text-primary">
               WHAT WE OFFER
             </h2>
-            <p className="font-clash text-[#D4E5FF] text-lg max-w-2xl mx-auto">
+            <p className="font-clash text-lg max-w-2xl mx-auto text-theme-text-secondary">
               Comprehensive solutions powered by cutting-edge technology
             </p>
           </div>
@@ -256,14 +256,14 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section
         ref={ctaRef}
-        className="py-24 px-6 md:px-20 relative overflow-hidden"
+        className="py-24 px-6 md:px-20 relative overflow-hidden bg-theme-bg-tertiary"
       >
         {/* Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-menakta-primaryFirst/5 to-transparent" />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2
-            className={`font-tusker text-4xl md:text-5xl tracking-tight mb-6 transition-all duration-700 ${
+            className={`font-tusker text-4xl md:text-5xl tracking-tight mb-6 transition-all duration-700 text-theme-text-primary ${
               ctaVisible
                 ? "opacity-0 animate-[fadeInUp_0.6s_ease-out_0.1s_forwards]"
                 : "opacity-0 translate-y-10"
@@ -272,7 +272,7 @@ export default function ServicesPage() {
             READY TO START YOUR PROJECT?
           </h2>
           <p
-            className={`font-clash text-[#D4E5FF] text-lg mb-10 max-w-2xl mx-auto transition-all duration-700 ${
+            className={`font-clash text-lg mb-10 max-w-2xl mx-auto transition-all duration-700 text-theme-text-secondary ${
               ctaVisible
                 ? "opacity-0 animate-[fadeIn_0.6s_ease-out_0.3s_forwards]"
                 : "opacity-0"

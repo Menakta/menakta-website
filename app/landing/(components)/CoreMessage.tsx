@@ -3,9 +3,8 @@
 import StarIcon from "@/public/icons/star";
 import { useEffect, useRef, useState } from "react";
 
-
 export default function Message() {
-     const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -25,10 +24,10 @@ export default function Message() {
     };
   }, []);
   return (
-   <section ref={ref} className="w-full py-32 md:px-20 px-2 bg-gradient-to-b from-black via-[#001845] to-[#002060] text-white relative overflow-hidden">
+   <section ref={ref} className="w-full py-32 md:px-20 px-2 relative overflow-hidden transition-colors duration-300 bg-gradient-to-b from-theme-bg-tertiary via-theme-bg-secondary to-theme-bg-primary text-theme-text-primary">
 
   {/* TITLE */}
-  <h2 className={`font-tusker text-center text-6xl md:text-7xl tracking-tight mb-16 ${isVisible ? "translate-y-0 opacity-0 animate-[fadeInUp_0.3s_ease-out_0.6s_forwards]":""}`}>
+  <h2 className={`font-tusker text-center text-6xl md:text-7xl tracking-tight mb-16 ${isVisible ? "translate-y-0 opacity-0 animate-[fadeInUp_0.3s_ease-out_0.6s_forwards]" : ""}`}>
     OUR MESSAGE
   </h2>
 
@@ -36,13 +35,13 @@ export default function Message() {
   <div className="max-w-3xl mx-auto relative">
 
     {/* Actual Card */}
-    <div className={`relative rounded-full border border-menakta-primaryFirst/40 bg-transparent backdrop-blur-xl px-10 py-12 shadow-xl`}>
-    <p className={`font-clash text-center text-sm md:text-lg leading-relaxed text-[#D4E5FF] ${isVisible ? "leading-relaxed opacity-0 animate-[fadeIn_0.6s_ease-out_0.9s_forwards] translate-y-0":""}`}>
+    <div className="relative rounded-full border backdrop-blur-xl px-10 py-12 shadow-xl border-theme-border bg-theme-card-bg">
+    <p className={`font-clash text-center text-sm md:text-lg leading-relaxed ${isVisible ? "leading-relaxed opacity-0 animate-[fadeIn_0.6s_ease-out_0.9s_forwards] translate-y-0" : ""} text-theme-text-secondary`}>
         Menakta bridges the gap between cold automation and meaningful experience by
         creating AI-driven 3D worlds, simulations, and robotics that think, move, and connect
         like people.
         <br /><br />
-        Our message is simple: innovation should not only work, it should <span className="text-white font-semibold">feel</span>.
+        Our message is simple: innovation should not only work, it should <span className="font-semibold text-theme-text-primary">feel</span>.
       </p>
     </div>
   </div>

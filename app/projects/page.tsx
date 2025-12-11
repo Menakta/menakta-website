@@ -119,13 +119,13 @@ export default function ProjectsPage() {
   }, []);
 
   return (
-    <main className="bg-menakta-secondaryFirst">
+    <main className="transition-colors duration-300 bg-theme-bg-primary">
       <ProjectsHero />
 
       {/* Projects Grid Section */}
       <section
         ref={sectionRef}
-        className="w-full min-h-screen py-24 md:px-20 bg-gradient-to-b from-menakta-secondaryFirst via-[#0a1525] to-menakta-secondaryFirst text-white relative overflow-hidden"
+        className="w-full min-h-screen py-24 md:px-20 relative overflow-hidden transition-colors duration-300 bg-gradient-to-b from-theme-bg-primary via-theme-bg-secondary to-theme-bg-primary text-theme-text-primary"
       >
         {/* Background Gradient Orbs */}
         <div className="absolute top-40 left-10 w-72 h-72 bg-menakta-primaryFirst/10 rounded-full blur-[120px]" />
@@ -135,11 +135,11 @@ export default function ProjectsPage() {
         <div className="max-w-7xl mx-auto relative z-10 px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="font-tusker text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6">
+            <h2 className="font-tusker text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6 text-theme-text-primary">
               OUR{" "}
               <span className="text-menakta-primarySecond">PORTFOLIO</span>
             </h2>
-            <p className="font-clash text-[#D4E5FF] text-lg max-w-2xl mx-auto">
+            <p className="font-clash text-lg max-w-2xl mx-auto text-theme-text-secondary">
               Discover how we&apos;ve helped businesses across industries achieve
               their digital transformation goals through innovative solutions.
             </p>
@@ -154,7 +154,7 @@ export default function ProjectsPage() {
                 className={`font-clash text-sm px-5 py-2 rounded-full border transition-all duration-300 ${
                   activeFilter === filter
                     ? "bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond border-transparent text-white"
-                    : "border-menakta-primaryFirst/30 text-menakta-primarySecond hover:bg-menakta-primaryFirst/10 hover:border-menakta-primarySecond"
+                    : "border-theme-border text-menakta-primarySecond hover:bg-menakta-primaryFirst/10 hover:border-menakta-primarySecond"
                 }`}
               >
                 {filter}
@@ -188,7 +188,7 @@ export default function ProjectsPage() {
           {/* Empty State */}
           {filteredProjects.length === 0 && (
             <div className="text-center py-16">
-              <p className="font-clash text-[#D4E5FF] text-lg">
+              <p className="font-clash text-lg text-theme-text-secondary">
                 No projects found in this category.
               </p>
             </div>
@@ -196,11 +196,11 @@ export default function ProjectsPage() {
 
           {/* Load More Button */}
           <div className="text-center mt-16">
-            <button className="group font-clash px-8 py-4 border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 text-white rounded-full text-sm uppercase tracking-wider hover:from-menakta-primaryFirst hover:to-menakta-primarySecond hover:border-menakta-primaryFirst hover:scale-105 transition-all duration-300">
+            <button className="group font-clash px-8 py-4 border border-theme-border rounded-full text-sm uppercase tracking-wider hover:scale-105 transition-all duration-300 bg-theme-card-bg text-theme-text-primary hover:bg-gradient-to-r hover:from-menakta-primaryFirst hover:to-menakta-primarySecond hover:text-white hover:border-transparent">
               <span className="flex items-center gap-2">
                 Load More Projects
                 <svg
-                  className="w-5 h-5 text-menakta-primarySecond group-hover:text-white transition-colors duration-300"
+                  className="w-5 h-5 transition-colors duration-300 text-menakta-primarySecond group-hover:text-white"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -219,15 +219,15 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="w-full py-24 px-6 md:px-20 bg-gradient-to-t from-black via-[#001845] to-[#0a1525] text-white relative overflow-hidden">
+      <section className="w-full py-24 px-6 md:px-20 relative overflow-hidden transition-colors duration-300 bg-theme-bg-tertiary text-theme-text-primary">
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-5" />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="font-tusker text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
+          <h2 className="font-tusker text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6 text-theme-text-primary">
             HAVE A PROJECT IN{" "}
             <span className="text-menakta-primarySecond">MIND?</span>
           </h2>
-          <p className="font-clash text-[#D4E5FF] text-lg mb-10 max-w-2xl mx-auto">
+          <p className="font-clash text-lg mb-10 max-w-2xl mx-auto text-theme-text-secondary">
             Let&apos;s collaborate and bring your vision to life. Our team is ready
             to create something extraordinary for you.
           </p>

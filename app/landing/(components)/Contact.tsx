@@ -25,7 +25,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full min-h-screen py-24 md:px-20 bg-menakta-secondaryFirst text-white relative overflow-hidden"
+      className="w-full min-h-screen py-24 md:px-20 relative overflow-hidden transition-colors duration-300 bg-theme-bg-primary text-theme-text-primary"
     >
       {/* Background Gradient Orbs */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-menakta-primaryFirst/20 rounded-full blur-[120px]" />
@@ -36,7 +36,7 @@ export default function Contact() {
         <h2 className="font-tusker text-center text-6xl md:text-7xl tracking-tight mb-6">
           GET IN TOUCH
         </h2>
-        <p className="font-clash text-center text-[#D4E5FF] text-lg max-w-2xl mx-auto mb-16">
+        <p className="font-clash text-center text-lg max-w-2xl mx-auto mb-16 text-theme-text-secondary">
           Ready to bring your vision to life? Let&apos;s create something
           extraordinary together.
         </p>
@@ -48,7 +48,7 @@ export default function Contact() {
               <h3 className="font-tusker text-3xl text-menakta-primarySecond mb-4">
                 LET&apos;S TALK
               </h3>
-              <p className="font-clash text-[#D4E5FF] leading-relaxed">
+              <p className="font-clash leading-relaxed text-theme-text-secondary">
                 Whether you have a project in mind or just want to explore
                 possibilities, we&apos;re here to listen and collaborate.
               </p>
@@ -75,9 +75,9 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-clash text-white font-semibold">Email</p>
-                  <p className="font-clash text-menakta-primarySecond group-hover:text-white transition-colors duration-300">
-                    hello@menakta.com
+                  <p className="font-clash font-semibold text-theme-text-primary">Email</p>
+                  <p className="font-clash text-menakta-primarySecond transition-colors duration-300 group-hover:text-menakta-primaryFirst">
+                   ammad@menakta.com
                   </p>
                 </div>
               </div>
@@ -106,10 +106,10 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-clash text-white font-semibold">
+                  <p className="font-clash font-semibold text-theme-text-primary">
                     Location
                   </p>
-                  <p className="font-clash text-menakta-primarySecond group-hover:text-white transition-colors duration-300">
+                  <p className="font-clash text-menakta-primarySecond transition-colors duration-300 group-hover:text-menakta-primaryFirst">
                     Global / Remote First
                   </p>
                 </div>
@@ -158,13 +158,13 @@ export default function Contact() {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-gradient-to-br from-[#0a1628]/80 to-[#001845]/80 border border-menakta-primaryFirst/30 rounded-2xl p-8 md:p-10 backdrop-blur-sm">
+          <div className="border rounded-2xl p-8 md:p-10 backdrop-blur-sm transition-colors duration-300 bg-theme-card-bg border-theme-border">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
                 <label
                   htmlFor="name"
-                  className="block font-clash text-white mb-2"
+                  className="block font-clash mb-2 text-theme-text-primary"
                 >
                   Name
                 </label>
@@ -175,7 +175,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-menakta-secondaryFirst/50 border border-menakta-primaryFirst/30 rounded-lg font-clash text-white placeholder-white/40 focus:outline-none focus:border-menakta-primarySecond transition-colors"
+                  className="w-full px-4 py-3 border rounded-lg font-clash focus:outline-none focus:border-menakta-primarySecond transition-colors bg-theme-card-bg border-theme-border text-theme-text-primary placeholder-theme-text-muted"
                   placeholder="Your name"
                 />
               </div>
@@ -184,7 +184,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block font-clash text-white mb-2"
+                  className="block font-clash mb-2 text-theme-text-primary"
                 >
                   Email
                 </label>
@@ -195,7 +195,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-menakta-secondaryFirst/50 border border-menakta-primaryFirst/30 rounded-lg font-clash text-white placeholder-white/40 focus:outline-none focus:border-menakta-primarySecond transition-colors"
+                  className="w-full px-4 py-3 border rounded-lg font-clash focus:outline-none focus:border-menakta-primarySecond transition-colors bg-theme-card-bg border-theme-border text-theme-text-primary placeholder-theme-text-muted"
                   placeholder="your@email.com"
                 />
               </div>
@@ -204,10 +204,10 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="company"
-                  className="block font-clash text-white mb-2"
+                  className="block font-clash mb-2 text-theme-text-primary"
                 >
                   Company{" "}
-                  <span className="text-white/40 text-sm">(Optional)</span>
+                  <span className="text-sm text-theme-text-muted">(Optional)</span>
                 </label>
                 <input
                   type="text"
@@ -215,7 +215,7 @@ export default function Contact() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-menakta-secondaryFirst/50 border border-menakta-primaryFirst/30 rounded-lg font-clash text-white placeholder-white/40 focus:outline-none focus:border-menakta-primarySecond transition-colors"
+                  className="w-full px-4 py-3 border rounded-lg font-clash focus:outline-none focus:border-menakta-primarySecond transition-colors bg-theme-card-bg border-theme-border text-theme-text-primary placeholder-theme-text-muted"
                   placeholder="Your company"
                 />
               </div>
@@ -224,7 +224,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block font-clash text-white mb-2"
+                  className="block font-clash mb-2 text-theme-text-primary"
                 >
                   Message
                 </label>
@@ -235,7 +235,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-menakta-secondaryFirst/50 border border-menakta-primaryFirst/30 rounded-lg font-clash text-white placeholder-white/40 focus:outline-none focus:border-menakta-primarySecond transition-colors resize-none"
+                  className="w-full px-4 py-3 border rounded-lg font-clash focus:outline-none focus:border-menakta-primarySecond transition-colors resize-none bg-theme-card-bg border-theme-border text-theme-text-primary placeholder-theme-text-muted"
                   placeholder="Tell us about your project..."
                 />
               </div>

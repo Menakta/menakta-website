@@ -1,5 +1,32 @@
 @import "tailwindcss";
 
+/* Theme Variables */
+:root {
+  /* Dark theme (default) */
+  --bg-primary: #0B0B0A;
+  --bg-secondary: #0a1628;
+  --bg-tertiary: #001845;
+  --text-primary: #F4F4F4;
+  --text-secondary: #D4E5FF;
+  --text-muted: rgba(244, 244, 244, 0.7);
+  --border-color: rgba(0, 65, 213, 0.3);
+  --card-bg: rgba(10, 22, 40, 0.8);
+  --card-bg-gradient-end: #001845;
+}
+
+:root.light {
+  /* Light theme - warm with light blue gradients */
+  --bg-primary: #f0f7ff;
+  --bg-secondary: #e1efff;
+  --bg-tertiary: #cce0f5;
+  --text-primary: #0B0B0A;
+  --text-secondary: #1e3a5f;
+  --text-muted: rgba(11, 11, 10, 0.7);
+  --border-color: rgba(0, 65, 213, 0.15);
+  --card-bg: rgba(15, 23, 42, 0.03);
+  --card-bg-gradient-end: rgba(15, 23, 42, 0.06);
+}
+
 /* Custom Font Faces */
 @font-face {
   font-family: 'TuskerGrotesk';
@@ -22,6 +49,17 @@
   --color-menakta-primarySecond: #00B0FF;
   --color-menakta-secondaryFirst: #0B0B0A;
   --color-menakta-secondarySecond: #F4F4F4;
+
+  /* Theme-aware colors */
+  --color-theme-bg-primary: var(--bg-primary);
+  --color-theme-bg-secondary: var(--bg-secondary);
+  --color-theme-bg-tertiary: var(--bg-tertiary);
+  --color-theme-text-primary: var(--text-primary);
+  --color-theme-text-secondary: var(--text-secondary);
+  --color-theme-text-muted: var(--text-muted);
+  --color-theme-border: var(--border-color);
+  --color-theme-card-bg: var(--card-bg);
+  --color-theme-card-gradient-end: var(--card-bg-gradient-end);
 
   --font-tusker: 'TuskerGrotesk', sans-serif;
   --font-clash: 'ClashDisplay', sans-serif;
