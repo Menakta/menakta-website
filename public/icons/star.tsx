@@ -1,38 +1,35 @@
 
-interface Props{
-    width:number|string,
-    height:number| string
-}
-const StarIcon=({width,height}:Props)=>{
-    return(
-         <svg
-    width={width}
-    height={height}
-    viewBox="0 0 100 100"
-  >
-    <polygon
-      points="
-        50,0 
-        61,35 
-        98,35 
-        68,57 
-        79,91 
-        50,70 
-        21,91 
-        32,57 
-        2,35 
-        39,35
-      "
-      fill="url(#starGradient)"
-    />
-    <defs>
-      <linearGradient id="starGradient" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#000dffff" />
-        <stop offset="100%" stopColor="#b34fffff" />
-      </linearGradient>
-    </defs>
-  </svg>
-    )
+interface Props {
+  width: number | string;
+  height: number | string;
 }
 
-export default StarIcon
+const StarIcon = ({ width, height }: Props) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 100 120"
+      fill="none"
+    >
+      <defs>
+        <linearGradient id="geminiGradient" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stopColor="#0041D5" />
+          <stop offset="50%" stopColor="#00B0FF" />
+          <stop offset="100%" stopColor="#0041D5" />
+        </linearGradient>
+      </defs>
+      {/* Akta/Gemini-style 4-pointed sparkle - elongated vertical */}
+      <path
+        d="M50 0
+           C50 45, 52 52, 85 60
+           C52 68, 50 75, 50 120
+           C50 75, 48 68, 15 60
+           C48 52, 50 45, 50 0Z"
+        fill="url(#geminiGradient)"
+      />
+    </svg>
+  );
+};
+
+export default StarIcon;

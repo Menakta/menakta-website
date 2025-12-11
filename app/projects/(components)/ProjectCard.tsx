@@ -20,9 +20,9 @@ export default function ProjectCard({
   link,
 }: ProjectCardProps) {
   return (
-    <div className="group relative bg-gradient-to-br from-[#0a1628]/80 to-[#1a0a30]/80 border border-menakta-primaryFirst/30 rounded-2xl overflow-hidden backdrop-blur-sm hover:border-menakta-primarySecond/50 transition-all duration-300 hover:shadow-lg hover:shadow-menakta-primaryFirst/10">
+    <div className="group relative bg-gradient-to-br from-[#0a1628]/80 to-[#001845]/80 border border-menakta-primaryFirst/30 rounded-2xl overflow-hidden backdrop-blur-sm hover:border-menakta-primarySecond/50 transition-all duration-300 hover:shadow-lg hover:shadow-menakta-primaryFirst/10">
       {/* Glow effect on hover */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-menakta-primaryFirst/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-menakta-primaryFirst/5 to-menakta-primarySecond/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
       {/* Project Image */}
       <div className="relative h-56 overflow-hidden">
@@ -40,7 +40,7 @@ export default function ProjectCard({
 
         {/* Category badge */}
         <div className="absolute top-4 left-4 z-10">
-          <span className="font-clash text-xs uppercase tracking-wider px-3 py-1.5 bg-gradient-to-r from-menakta-primaryFirst to-purple-600 text-white rounded-full">
+          <span className="font-clash text-xs uppercase tracking-wider px-3 py-1.5 bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond text-white rounded-full">
             {category}
           </span>
         </div>
@@ -51,7 +51,7 @@ export default function ProjectCard({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:from-menakta-primaryFirst hover:to-purple-600 hover:scale-110 transition-all duration-300"
+            className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:from-menakta-primaryFirst hover:to-menakta-primarySecond hover:scale-110 transition-all duration-300"
           >
             <svg
               className="w-5 h-5 text-menakta-primarySecond group-hover:text-white transition-colors duration-300"

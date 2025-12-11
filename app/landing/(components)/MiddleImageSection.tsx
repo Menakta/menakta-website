@@ -27,7 +27,7 @@ export default function MiddleImageSection() {
       </div>
 
       {/* Gradient overlay - blue, purple, transparent */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black-900/80 via-purple-900/70 to-transparent z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#001845]/80 via-[#002060]/70 to-transparent z-[1]" />
       <div className="absolute inset-0 bg-gradient-to-t from-menakta-secondaryFirst via-transparent to-transparent z-[2]" />
 
       {/* Content */}
@@ -57,7 +57,7 @@ export default function MiddleImageSection() {
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link href={"/services"} className="w-full sm:w-auto opacity-0 animate-[fadeInUp_0.6s_ease-out_1.2s_forwards]">
-            <button className="w-full sm:w-auto font-clash px-8 py-4 bg-gradient-to-r from-menakta-primaryFirst to-purple-600 border border-transparent text-white uppercase rounded-full text-sm tracking-wider hover:shadow-lg hover:shadow-menakta-primaryFirst/30 hover:scale-105 active:scale-95 transition-all duration-300">
+            <button className="w-full sm:w-auto font-clash px-8 py-4 bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond border border-transparent text-white uppercase rounded-full text-sm tracking-wider hover:shadow-lg hover:shadow-menakta-primaryFirst/30 hover:scale-105 active:scale-95 transition-all duration-300">
               Our Services
             </button>
           </Link>

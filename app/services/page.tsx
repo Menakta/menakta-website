@@ -207,7 +207,7 @@ export default function ServicesPage() {
       <section ref={servicesRef} className="py-16 md:px-20 relative overflow-hidden">
         {/* Background Gradient Orbs */}
         <div className="absolute top-1/4 left-0 w-80 h-80 bg-menakta-primaryFirst/10 rounded-full blur-[150px]" />
-        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-purple-600/10 rounded-full blur-[150px]" />
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-menakta-primarySecond/10 rounded-full blur-[150px]" />
 
         <div className="max-w-7xl mx-auto px-8 relative z-10">
           {/* Section Title */}
@@ -283,7 +283,7 @@ export default function ServicesPage() {
           </p>
           <a
             href="/landing#contact"
-            className={`inline-block font-clash px-10 py-4 bg-gradient-to-r from-menakta-primaryFirst to-purple-600 text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primarySecond/30 active:scale-95 transition-all duration-300 ${
+            className={`inline-block font-clash px-10 py-4 bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primarySecond/30 active:scale-95 transition-all duration-300 ${
               ctaVisible
                 ? "opacity-0 animate-[fadeInUp_0.6s_ease-out_0.5s_forwards]"
                 : "opacity-0 translate-y-10"
@@ -300,7 +300,7 @@ export default function ServicesPage() {
         <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-blue-200/30 rounded-full animate-float-medium" />
         <div className="absolute top-1/2 left-1/3 w-1.5 h-1.5 bg-menakta-primaryFirst/20 rounded-full animate-float-fast" />
         <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-menakta-primarySecond/15 rounded-full animate-float-slow" />
-        <div className="absolute bottom-1/4 left-1/5 w-1 h-1 bg-purple-400/30 rounded-full animate-float-medium" />
+        <div className="absolute bottom-1/4 left-1/5 w-1 h-1 bg-menakta-primarySecond/30 rounded-full animate-float-medium" />
       </div>
     </main>
   );

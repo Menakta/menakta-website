@@ -2,15 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import dynamic from "next/dynamic";
-
-const AnimatedCube = dynamic(() => import("@/app/(components)/AnimatedCube"), {
-  ssr: false,
-});
-
-const AnimatedStar = dynamic(() => import("@/app/(components)/AnimatedStar"), {
-  ssr: false,
-});
 
 export default function AboutHero() {
   return (
@@ -31,7 +22,7 @@ export default function AboutHero() {
       </div>
 
       {/* Gradient overlay - blue, purple, transparent */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/80 via-purple-900/70 to-transparent z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#001845]/80 via-[#002060]/70 to-transparent z-[1]" />
       <div className="absolute inset-0 bg-gradient-to-t from-menakta-secondaryFirst via-transparent to-transparent z-[2]" />
 
       {/* Content */}
@@ -64,7 +55,7 @@ export default function AboutHero() {
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link href="/landing#contact" className="w-full sm:w-auto">
-            <button className="w-full sm:w-auto font-clash px-8 py-4 bg-gradient-to-r from-menakta-primaryFirst to-purple-600 border border-transparent text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primaryFirst/30 hover:scale-105 active:scale-95 transition-all duration-300 opacity-0 animate-[fadeInUp_0.6s_ease-out_1.2s_forwards]">
+            <button className="w-full sm:w-auto font-clash px-8 py-4 bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond border border-transparent text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primaryFirst/30 hover:scale-105 active:scale-95 transition-all duration-300 opacity-0 animate-[fadeInUp_0.6s_ease-out_1.2s_forwards]">
               Get in Touch
             </button>
           </Link>
@@ -94,7 +85,7 @@ export default function AboutHero() {
               y2="0%"
             >
               <stop offset="0%" stopColor="#4F46E5" stopOpacity="0.3" />
-              <stop offset="50%" stopColor="#8B5CF6" stopOpacity="0.3" />
+              <stop offset="50%" stopColor="#00B0FF" stopOpacity="0.3" />
               <stop offset="100%" stopColor="#0041D5" stopOpacity="0.3" />
             </linearGradient>
           </defs>
@@ -119,7 +110,7 @@ export default function AboutHero() {
               x2="100%"
               y2="0%"
             >
-              <stop offset="0%" stopColor="#804afdff" stopOpacity="0.5" />
+              <stop offset="0%" stopColor="#0041D5" stopOpacity="0.5" />
               <stop offset="50%" stopColor="#306dfdff" stopOpacity="0.5" />
               <stop offset="100%" stopColor="#65ceffff" stopOpacity="0.5" />
             </linearGradient>
@@ -146,7 +137,7 @@ export default function AboutHero() {
               y2="0%"
             >
               <stop offset="0%" stopColor="#00B0FF" stopOpacity="0.6" />
-              <stop offset="50%" stopColor="#8B5CF6" stopOpacity="0.6" />
+              <stop offset="50%" stopColor="#00B0FF" stopOpacity="0.6" />
               <stop offset="100%" stopColor="#4F46E5" stopOpacity="0.6" />
             </linearGradient>
           </defs>
@@ -157,26 +148,16 @@ export default function AboutHero() {
         </svg>
 
         {/* Glow effect */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-32 bg-gradient-to-t from-menakta-primarySecond/20 via-purple-500/10 to-transparent blur-3xl" />
-      </div>
-
-      {/* 3D Animated Cube */}
-      <div className="absolute right-10 md:right-20 lg:right-32 top-1/2 -translate-y-1/2 z-[4]">
-        <AnimatedCube className="w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80" size={0.5} />
-      </div>
-
-      {/* 3D Animated Star */}
-      <div className="absolute left-10 md:left-20 lg:left-32 top-1/3 -translate-y-1/2 z-[4]">
-        <AnimatedStar className="w-32 h-32 lg:w-48 lg:h-48 xl:w-56 xl:h-56" size={0.8} />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-32 bg-gradient-to-t from-menakta-primarySecond/20 via-menakta-primaryFirst/10 to-transparent blur-3xl" />
       </div>
 
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-[5]">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-indigo-500/30 rounded-full animate-float-slow" />
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-menakta-primaryFirst/30 rounded-full animate-float-slow" />
         <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-menakta-primarySecond/60 rounded-full animate-float-medium" />
-        <div className="absolute top-1/2 left-1/3 w-1.5 h-1.5 bg-purple-500/30 rounded-full animate-float-fast" />
+        <div className="absolute top-1/2 left-1/3 w-1.5 h-1.5 bg-menakta-primarySecond/30 rounded-full animate-float-fast" />
         <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-blue-400/20 rounded-full animate-float-slow" />
-        <div className="absolute top-1/4 right-1/5 w-1 h-1 bg-indigo-400/40 rounded-full animate-float-medium" />
+        <div className="absolute top-1/4 right-1/5 w-1 h-1 bg-menakta-primaryFirst/40 rounded-full animate-float-medium" />
       </div>
     </section>
   );

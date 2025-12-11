@@ -25,7 +25,7 @@ export default function Message() {
     };
   }, []);
   return (
-   <section ref={ref} className="w-full py-32 md:px-20 px-2 bg-gradient-to-b from-black via-[#001845] to-[#2D0A4E] text-white relative overflow-hidden">
+   <section ref={ref} className="w-full py-32 md:px-20 px-2 bg-gradient-to-b from-black via-[#001845] to-[#002060] text-white relative overflow-hidden">
 
   {/* TITLE */}
   <h2 className={`font-tusker text-center text-6xl md:text-7xl tracking-tight mb-16 ${isVisible ? "translate-y-0 opacity-0 animate-[fadeInUp_0.3s_ease-out_0.6s_forwards]":""}`}>
@@ -49,7 +49,7 @@ export default function Message() {
 
   {/* BLUE STAR ICON */}
 <div className="mt-20 flex justify-center">
- <StarIcon width={70} height={70}/>
+ <StarIcon width={80} height={80}/>
 </div>
 </section>
 

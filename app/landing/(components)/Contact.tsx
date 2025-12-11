@@ -29,7 +29,7 @@ export default function Contact() {
     >
       {/* Background Gradient Orbs */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-menakta-primaryFirst/20 rounded-full blur-[120px]" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-600/20 rounded-full blur-[150px]" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-menakta-primarySecond/20 rounded-full blur-[150px]" />
 
       <div className="max-w-7xl mx-auto relative z-10 px-8">
         {/* Title */}
@@ -58,7 +58,7 @@ export default function Contact() {
             <div className="space-y-6">
               {/* Email */}
               <div className="group flex items-center gap-4 cursor-pointer">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 flex items-center justify-center group-hover:from-menakta-primaryFirst group-hover:to-purple-600 group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 flex items-center justify-center group-hover:from-menakta-primaryFirst group-hover:to-menakta-primarySecond group-hover:scale-110 transition-all duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 h-5 text-menakta-primarySecond group-hover:text-white transition-colors duration-300"
@@ -84,7 +84,7 @@ export default function Contact() {
 
               {/* Location */}
               <div className="group flex items-center gap-4 cursor-pointer">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 flex items-center justify-center group-hover:from-menakta-primaryFirst group-hover:to-purple-600 group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 flex items-center justify-center group-hover:from-menakta-primaryFirst group-hover:to-menakta-primarySecond group-hover:scale-110 transition-all duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 h-5 text-menakta-primarySecond group-hover:text-white transition-colors duration-300"
@@ -119,7 +119,7 @@ export default function Contact() {
               <div className="flex items-center gap-4 pt-4">
                 <a
                   href="#"
-                  className="group w-10 h-10 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/10 to-purple-600/10 flex items-center justify-center hover:from-menakta-primaryFirst hover:to-purple-600 hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300"
+                  className="group w-10 h-10 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/10 to-menakta-primarySecond/10 flex items-center justify-center hover:from-menakta-primaryFirst hover:to-menakta-primarySecond hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300"
                 >
                   <svg
                     className="w-5 h-5 text-menakta-primarySecond group-hover:text-white transition-colors duration-300"
@@ -131,7 +131,7 @@ export default function Contact() {
                 </a>
                 <a
                   href="#"
-                  className="group w-10 h-10 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/10 to-purple-600/10 flex items-center justify-center hover:from-menakta-primaryFirst hover:to-purple-600 hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300"
+                  className="group w-10 h-10 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/10 to-menakta-primarySecond/10 flex items-center justify-center hover:from-menakta-primaryFirst hover:to-menakta-primarySecond hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300"
                 >
                   <svg
                     className="w-5 h-5 text-menakta-primarySecond group-hover:text-white transition-colors duration-300"
@@ -143,7 +143,7 @@ export default function Contact() {
                 </a>
                 <a
                   href="#"
-                  className="group w-10 h-10 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/10 to-purple-600/10 flex items-center justify-center hover:from-menakta-primaryFirst hover:to-purple-600 hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300"
+                  className="group w-10 h-10 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/10 to-menakta-primarySecond/10 flex items-center justify-center hover:from-menakta-primaryFirst hover:to-menakta-primarySecond hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300"
                 >
                   <svg
                     className="w-5 h-5 text-menakta-primarySecond group-hover:text-white transition-colors duration-300"
@@ -158,7 +158,7 @@ export default function Contact() {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-gradient-to-br from-[#0a1628]/80 to-[#1a0a30]/80 border border-menakta-primaryFirst/30 rounded-2xl p-8 md:p-10 backdrop-blur-sm">
+          <div className="bg-gradient-to-br from-[#0a1628]/80 to-[#001845]/80 border border-menakta-primaryFirst/30 rounded-2xl p-8 md:p-10 backdrop-blur-sm">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
@@ -243,7 +243,7 @@ export default function Contact() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full font-clash px-8 py-4 bg-gradient-to-r from-menakta-primaryFirst to-purple-600 border border-transparent text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primaryFirst/30 hover:scale-105 active:scale-[0.98] transition-all duration-300"
+                className="w-full font-clash px-8 py-4 bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond border border-transparent text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primaryFirst/30 hover:scale-105 active:scale-[0.98] transition-all duration-300"
               >
                 Send Message
               </button>

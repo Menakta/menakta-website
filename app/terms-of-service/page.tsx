@@ -6,9 +6,9 @@ export default function TermsOfServicePage() {
   return (
     <main className="min-h-screen bg-menakta-secondaryFirst text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 md:px-20 bg-gradient-to-b from-purple-900/50 via-blue-900/30 to-menakta-secondaryFirst overflow-hidden">
+      <section className="relative pt-32 pb-20 px-6 md:px-20 bg-gradient-to-b from-[#001845]/50 via-[#002060]/30 to-menakta-secondaryFirst overflow-hidden">
         {/* Background Gradient Orbs */}
-        <div className="absolute top-20 right-10 w-72 h-72 bg-purple-600/20 rounded-full blur-[120px]" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-menakta-primarySecond/20 rounded-full blur-[120px]" />
         <div className="absolute top-40 left-10 w-96 h-96 bg-menakta-primaryFirst/15 rounded-full blur-[150px]" />
 
         <div className="max-w-4xl mx-auto relative z-10">
@@ -224,7 +224,7 @@ export default function TermsOfServicePage() {
             <p className="font-clash text-[#D4E5FF] leading-relaxed">
               If you have any questions about these Terms of Service, please contact us at:
             </p>
-            <div className="font-clash text-[#D4E5FF] leading-relaxed p-6 rounded-xl bg-gradient-to-br from-menakta-primaryFirst/10 to-purple-600/10 border border-menakta-primaryFirst/20">
+            <div className="font-clash text-[#D4E5FF] leading-relaxed p-6 rounded-xl bg-gradient-to-br from-menakta-primaryFirst/10 to-menakta-primarySecond/10 border border-menakta-primaryFirst/20">
               <p className="text-white font-semibold">Menakta Tech</p>
               <p>Email: legal@menakta.com</p>
               <p>Website: www.menakta.com</p>
@@ -258,9 +258,9 @@ export default function TermsOfServicePage() {
 
       {/* Floating particles */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-[1]">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-purple-500/20 rounded-full animate-float-slow" />
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-menakta-primaryFirst/20 rounded-full animate-float-slow" />
         <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-blue-200/30 rounded-full animate-float-medium" />
-        <div className="absolute top-1/2 left-1/3 w-1.5 h-1.5 bg-purple-500/20 rounded-full animate-float-fast" />
+        <div className="absolute top-1/2 left-1/3 w-1.5 h-1.5 bg-menakta-primarySecond/20 rounded-full animate-float-fast" />
         <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-menakta-primarySecond/15 rounded-full animate-float-slow" />
       </div>
     </main>

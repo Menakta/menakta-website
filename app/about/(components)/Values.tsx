@@ -112,7 +112,7 @@ export default function Values() {
       className="w-full py-24 md:px-20 bg-menakta-secondaryFirst text-white relative overflow-hidden"
     >
       {/* Background Gradient Orbs */}
-      <div className="absolute top-1/4 left-0 w-80 h-80 bg-purple-600/10 rounded-full blur-[150px]" />
+      <div className="absolute top-1/4 left-0 w-80 h-80 bg-menakta-primarySecond/10 rounded-full blur-[150px]" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-menakta-primaryFirst/10 rounded-full blur-[150px]" />
 
       <div className="max-w-7xl mx-auto relative z-10 px-8">
@@ -147,9 +147,9 @@ export default function Values() {
                 animationDelay: isVisible ? `${0.2 + index * 0.1}s` : "0s",
               }}
             >
-              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-menakta-primaryFirst/10 to-purple-600/10 border border-menakta-primaryFirst/20 hover:border-menakta-primarySecond/50 transition-all duration-300 hover:scale-105">
+              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-menakta-primaryFirst/10 to-menakta-primarySecond/10 border border-menakta-primaryFirst/20 hover:border-menakta-primarySecond/50 transition-all duration-300 hover:scale-105">
                 {/* Icon */}
-                <div className="w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-menakta-primaryFirst to-purple-600 flex items-center justify-center text-white">
+                <div className="w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-menakta-primaryFirst to-menakta-primarySecond flex items-center justify-center text-white">
                   {value.icon}
                 </div>
 

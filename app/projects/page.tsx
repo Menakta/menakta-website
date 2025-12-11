@@ -129,7 +129,7 @@ export default function ProjectsPage() {
       >
         {/* Background Gradient Orbs */}
         <div className="absolute top-40 left-10 w-72 h-72 bg-menakta-primaryFirst/10 rounded-full blur-[120px]" />
-        <div className="absolute top-1/2 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-[150px]" />
+        <div className="absolute top-1/2 right-10 w-96 h-96 bg-menakta-primarySecond/10 rounded-full blur-[150px]" />
         <div className="absolute bottom-40 left-1/3 w-80 h-80 bg-menakta-primarySecond/10 rounded-full blur-[130px]" />
 
         <div className="max-w-7xl mx-auto relative z-10 px-8">
@@ -153,7 +153,7 @@ export default function ProjectsPage() {
                 onClick={() => setActiveFilter(filter)}
                 className={`font-clash text-sm px-5 py-2 rounded-full border transition-all duration-300 ${
                   activeFilter === filter
-                    ? "bg-gradient-to-r from-menakta-primaryFirst to-purple-600 border-transparent text-white"
+                    ? "bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond border-transparent text-white"
                     : "border-menakta-primaryFirst/30 text-menakta-primarySecond hover:bg-menakta-primaryFirst/10 hover:border-menakta-primarySecond"
                 }`}
               >
@@ -196,7 +196,7 @@ export default function ProjectsPage() {
 
           {/* Load More Button */}
           <div className="text-center mt-16">
-            <button className="group font-clash px-8 py-4 border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 text-white rounded-full text-sm uppercase tracking-wider hover:from-menakta-primaryFirst hover:to-purple-600 hover:border-menakta-primaryFirst hover:scale-105 transition-all duration-300">
+            <button className="group font-clash px-8 py-4 border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 text-white rounded-full text-sm uppercase tracking-wider hover:from-menakta-primaryFirst hover:to-menakta-primarySecond hover:border-menakta-primaryFirst hover:scale-105 transition-all duration-300">
               <span className="flex items-center gap-2">
                 Load More Projects
                 <svg
@@ -233,7 +233,7 @@ export default function ProjectsPage() {
           </p>
           <a
             href="/landing#contact"
-            className="inline-block font-clash px-10 py-4 bg-gradient-to-r from-menakta-primaryFirst to-purple-600 border border-transparent text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primaryFirst/30 hover:scale-105 active:scale-95 transition-all duration-300"
+            className="inline-block font-clash px-10 py-4 bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond border border-transparent text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primaryFirst/30 hover:scale-105 active:scale-95 transition-all duration-300"
           >
             Start Your Project
           </a>

@@ -6,10 +6,10 @@ export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-menakta-secondaryFirst text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 md:px-20 bg-gradient-to-b from-blue-900/50 via-purple-900/30 to-menakta-secondaryFirst overflow-hidden">
+      <section className="relative pt-32 pb-20 px-6 md:px-20 bg-gradient-to-b from-[#001845]/50 via-[#002060]/30 to-menakta-secondaryFirst overflow-hidden">
         {/* Background Gradient Orbs */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-menakta-primaryFirst/20 rounded-full blur-[120px]" />
-        <div className="absolute top-40 right-10 w-96 h-96 bg-purple-600/15 rounded-full blur-[150px]" />
+        <div className="absolute top-40 right-10 w-96 h-96 bg-menakta-primarySecond/15 rounded-full blur-[150px]" />
 
         <div className="max-w-4xl mx-auto relative z-10">
           <h1 className="font-tusker text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6 opacity-0 animate-[fadeInUp_0.6s_ease-out_0.1s_forwards]">
@@ -174,7 +174,7 @@ export default function PrivacyPolicyPage() {
             <p className="font-clash text-[#D4E5FF] leading-relaxed">
               If you have any questions about this Privacy Policy or our data practices, please contact us at:
             </p>
-            <div className="font-clash text-[#D4E5FF] leading-relaxed p-6 rounded-xl bg-gradient-to-br from-menakta-primaryFirst/10 to-purple-600/10 border border-menakta-primaryFirst/20">
+            <div className="font-clash text-[#D4E5FF] leading-relaxed p-6 rounded-xl bg-gradient-to-br from-menakta-primaryFirst/10 to-menakta-primarySecond/10 border border-menakta-primaryFirst/20">
               <p className="text-white font-semibold">Menakta Tech</p>
               <p>Email: privacy@menakta.com</p>
               <p>Website: www.menakta.com</p>

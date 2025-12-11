@@ -30,7 +30,7 @@ export default function AboutPage() {
           </p>
           <a
             href="/landing#contact"
-            className="inline-block font-clash px-10 py-4 bg-gradient-to-r from-menakta-primaryFirst to-purple-600 border border-transparent text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primaryFirst/30 hover:scale-105 active:scale-95 transition-all duration-300"
+            className="inline-block font-clash px-10 py-4 bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond border border-transparent text-white rounded-full text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primaryFirst/30 hover:scale-105 active:scale-95 transition-all duration-300"
           >
             Get in Touch
           </a>
@@ -43,7 +43,7 @@ export default function AboutPage() {
         <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-blue-200/30 rounded-full animate-float-medium" />
         <div className="absolute top-1/2 left-1/3 w-1.5 h-1.5 bg-menakta-primaryFirst/20 rounded-full animate-float-fast" />
         <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-menakta-primarySecond/15 rounded-full animate-float-slow" />
-        <div className="absolute bottom-1/4 left-1/5 w-1 h-1 bg-purple-400/30 rounded-full animate-float-medium" />
+        <div className="absolute bottom-1/4 left-1/5 w-1 h-1 bg-menakta-primarySecond/30 rounded-full animate-float-medium" />
       </div>
     </main>
   );

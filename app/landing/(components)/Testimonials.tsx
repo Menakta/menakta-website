@@ -63,7 +63,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="w-full min-h-screen py-16 md:py-32 md:px-20 px-2 bg-gradient-to-t from-black via-[#001845] to-[#2D0A4E] text-white relative overflow-visible">
+    <section className="w-full min-h-screen py-16 md:py-32 md:px-20 px-2 bg-gradient-to-t from-black via-[#001845] to-[#002060] text-white relative overflow-visible">
       {/* Animated Gradient Circle Background */}
 
       {/* Title */}
@@ -76,7 +76,7 @@ export default function Testimonials() {
         {/* Left Arrow */}
         <button
           onClick={handlePrev}
-          className="group absolute left-0 md:-left-16 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 hover:from-menakta-primaryFirst hover:to-purple-600 hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300 flex items-center justify-center"
+          className="group absolute left-0 md:-left-16 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 hover:from-menakta-primaryFirst hover:to-menakta-primarySecond hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300 flex items-center justify-center"
           aria-label="Previous testimonial"
         >
           <svg
@@ -98,7 +98,7 @@ export default function Testimonials() {
         {/* Right Arrow */}
         <button
           onClick={handleNext}
-          className="group absolute right-0 md:-right-16 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 hover:from-menakta-primaryFirst hover:to-purple-600 hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300 flex items-center justify-center"
+          className="group absolute right-0 md:-right-16 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 hover:from-menakta-primaryFirst hover:to-menakta-primarySecond hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300 flex items-center justify-center"
           aria-label="Next testimonial"
         >
           <svg

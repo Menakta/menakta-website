@@ -57,7 +57,7 @@ export default function Team() {
     >
       {/* Background Gradient Orbs */}
       <div className="absolute top-40 left-10 w-72 h-72 bg-menakta-primaryFirst/10 rounded-full blur-[120px]" />
-      <div className="absolute bottom-40 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-[150px]" />
+      <div className="absolute bottom-40 right-10 w-96 h-96 bg-menakta-primarySecond/10 rounded-full blur-[150px]" />
 
       <div className="max-w-7xl mx-auto relative z-10 px-8">
         {/* Section Header */}
@@ -91,9 +91,9 @@ export default function Team() {
                 animationDelay: isVisible ? `${0.2 + index * 0.1}s` : "0s",
               }}
             >
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 border border-menakta-primaryFirst/20 p-6 hover:border-menakta-primarySecond/50 transition-all duration-300 hover:scale-105">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 border border-menakta-primaryFirst/20 p-6 hover:border-menakta-primarySecond/50 transition-all duration-300 hover:scale-105">
                 {/* Avatar Placeholder */}
-                <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-menakta-primaryFirst to-purple-600 flex items-center justify-center overflow-hidden">
+                <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-menakta-primaryFirst to-menakta-primarySecond flex items-center justify-center overflow-hidden">
                   <span className="font-tusker text-4xl text-white">
                     {member.name.split(" ").map((n) => n[0]).join("")}
                   </span>

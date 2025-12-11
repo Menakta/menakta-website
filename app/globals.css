@@ -1,13 +1,30 @@
 @import "tailwindcss";
 
+/* Custom Font Faces */
+@font-face {
+  font-family: 'TuskerGrotesk';
+  src: url('/fonts/TuskerGrotesk-4500Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ClashDisplay';
+  src: url('/fonts/ClashDisplay-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-menakta-primaryFirst: #0041D5;
   --color-menakta-primarySecond: #00B0FF;
   --color-menakta-secondaryFirst: #0B0B0A;
   --color-menakta-secondarySecond: #F4F4F4;
 
-  --font-tusker: var(--font-tusker), sans-serif;
-  --font-clash: var(--font-clash), sans-serif;
+  --font-tusker: 'TuskerGrotesk', sans-serif;
+  --font-clash: 'ClashDisplay', sans-serif;
 
   /* Float animations */
   --animate-float-slow: float-slow 6s ease-in-out infinite;

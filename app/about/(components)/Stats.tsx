@@ -33,7 +33,7 @@ export default function Stats() {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-20 px-6 md:px-20 bg-gradient-to-r from-menakta-primaryFirst via-purple-600 to-indigo-600 text-white relative overflow-hidden"
+      className="w-full py-20 px-6 md:px-20 bg-gradient-to-r from-menakta-primaryFirst via-menakta-primarySecond to-menakta-primaryFirst text-white relative overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">

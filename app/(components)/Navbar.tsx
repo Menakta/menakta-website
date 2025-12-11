@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -38,16 +39,19 @@ export default function Navbar() {
     <nav
       className={`
         fixed top-0 left-0 right-0 z-50 transition-all duration-500 
-        ${scrolled ? "bg-gradient-to-br from-blue-900/95 via-purple-900/95 to-indigo-900/95 backdrop-blur-md shadow-lg" : "bg-transparent"}
+        ${scrolled ? "bg-gradient-to-br from-[#001845]/95 via-[#002060]/95 to-[#0041D5]/95 backdrop-blur-md shadow-lg" : "bg-transparent"}
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="font-tusker text-2xl md:text-3xl text-menakta-secondarySecond tracking-wide">
-              Menakta <span className="text-menakta-primarySecond">Tech</span>
-            </span>
+              <Image
+                src={`${scrolled ? "/logos/Menakta_White_Logo.png" : "/logos/Menakta_White_Logo_2.png"}`}
+                alt="Menakta Logo"
+                width={200}
+                height={50}
+              />
           </Link>
 
           {/* Desktop Navigation */}
@@ -94,7 +98,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`md:hidden absolute top-20 left-0 right-0 bg-gradient-to-br from-blue-900/95 via-purple-900/95 to-indigo-900/95 backdrop-blur-md transition-all duration-300 ${
+        className={`md:hidden absolute top-20 left-0 right-0 bg-gradient-to-br from-[#001845]/95 via-[#002060]/95 to-[#0041D5]/95 backdrop-blur-md transition-all duration-300 ${
           isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >

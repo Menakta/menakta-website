@@ -18,7 +18,7 @@ export default function TestimonialCard({
   avatar,
 }: TestimonialCardProps) {
   return (
-    <div className="bg-gradient-to-br from-[#0a1628] to-[#1a0a30] border border-menakta-primaryFirst/30 rounded-2xl p-8 md:p-10 max-w-2xl mx-auto">
+    <div className="bg-gradient-to-br from-[#0a1628] to-[#001845] border border-menakta-primaryFirst/30 rounded-2xl p-8 md:p-10 max-w-2xl mx-auto">
       {/* Quote Icon */}
       <div className="text-menakta-primaryFirst text-5xl font-serif mb-4">"</div>
 
@@ -30,7 +30,7 @@ export default function TestimonialCard({
       {/* Author Info */}
       <div className="group flex items-center gap-4 cursor-pointer">
         {/* Avatar */}
-        <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 group-hover:from-menakta-primaryFirst group-hover:to-purple-600 group-hover:scale-110 transition-all duration-300 flex items-center justify-center text-menakta-primarySecond group-hover:text-white font-tusker text-xl overflow-hidden">
+        <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 group-hover:from-menakta-primaryFirst group-hover:to-menakta-primarySecond group-hover:scale-110 transition-all duration-300 flex items-center justify-center text-menakta-primarySecond group-hover:text-white font-tusker text-xl overflow-hidden">
           {avatar ? (
             <Image
               src={avatar}

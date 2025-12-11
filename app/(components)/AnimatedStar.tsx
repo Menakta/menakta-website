@@ -8,49 +8,72 @@ interface StarProps {
   size?: number;
 }
 
-function createStarGeometry(outerRadius: number, innerRadius: number, points: number): THREE.BufferGeometry {
+function createSparkleGeometry(size: number): THREE.BufferGeometry {
   const shape = new THREE.Shape();
-  const angleStep = Math.PI / points;
 
-  for (let i = 0; i < points * 2; i++) {
-    const radius = i % 2 === 0 ? outerRadius : innerRadius;
-    const angle = i * angleStep - Math.PI / 2;
-    const x = Math.cos(angle) * radius;
-    const y = Math.sin(angle) * radius;
+  // Akta/Gemini-style 4-pointed sparkle with elongated vertical points
+  const topY = size * 1.2;      // Top point (elongated)
+  const bottomY = -size * 1.2;  // Bottom point (elongated)
+  const rightX = size * 0.7;    // Right point (shorter)
+  const leftX = -size * 0.7;    // Left point (shorter)
+  const centerPinch = size * 0.08; // How pinched the center is
 
-    if (i === 0) {
-      shape.moveTo(x, y);
-    } else {
-      shape.lineTo(x, y);
-    }
-  }
-  shape.closePath();
+  // Start at top point
+  shape.moveTo(0, topY);
+
+  // Curve to right point
+  shape.bezierCurveTo(
+    centerPinch, topY * 0.4,   // Control point 1
+    rightX * 0.4, centerPinch, // Control point 2
+    rightX, 0                   // End point (right)
+  );
+
+  // Curve to bottom point
+  shape.bezierCurveTo(
+    rightX * 0.4, -centerPinch, // Control point 1
+    centerPinch, bottomY * 0.4, // Control point 2
+    0, bottomY                   // End point (bottom)
+  );
+
+  // Curve to left point
+  shape.bezierCurveTo(
+    -centerPinch, bottomY * 0.4, // Control point 1
+    leftX * 0.4, -centerPinch,   // Control point 2
+    leftX, 0                      // End point (left)
+  );
+
+  // Curve back to top point
+  shape.bezierCurveTo(
+    leftX * 0.4, centerPinch,   // Control point 1
+    -centerPinch, topY * 0.4,   // Control point 2
+    0, topY                      // End point (top)
+  );
 
   const extrudeSettings = {
-    depth: outerRadius * 0.4,
+    depth: size * 0.3,
     bevelEnabled: true,
-    bevelThickness: outerRadius * 0.08,
-    bevelSize: outerRadius * 0.08,
-    bevelSegments: 3,
+    bevelThickness: size * 0.06,
+    bevelSize: size * 0.06,
+    bevelSegments: 4,
+    curveSegments: 32,
   };
 
   return new THREE.ExtrudeGeometry(shape, extrudeSettings);
 }
 
-function Star({ size = 1 }: StarProps) {
+function Sparkle({ size = 1 }: StarProps) {
   const meshRef = useRef<THREE.Mesh>(null);
   const materialRef = useRef<THREE.ShaderMaterial>(null);
 
-  const geometry = useMemo(() => createStarGeometry(size, size * 0.4, 5), [size]);
+  const geometry = useMemo(() => createSparkleGeometry(size), [size]);
 
   const gradientShader = useMemo(
     () => ({
       uniforms: {
         uTime: { value: 0 },
-        uPink: { value: new THREE.Color("#EC4899") },
-        uPurple: { value: new THREE.Color("#8B5CF6") },
-        uMagenta: { value: new THREE.Color("#D946EF") },
-        uViolet: { value: new THREE.Color("#7C3AED") },
+        uColorTop: { value: new THREE.Color("#0041D5") },
+        uColorMid: { value: new THREE.Color("#00B0FF") },
+        uColorBottom: { value: new THREE.Color("#0041D5") },
       },
       vertexShader: `
         varying vec2 vUv;
@@ -68,10 +91,9 @@ function Star({ size = 1 }: StarProps) {
       `,
       fragmentShader: `
         uniform float uTime;
-        uniform vec3 uPink;
-        uniform vec3 uPurple;
-        uniform vec3 uMagenta;
-        uniform vec3 uViolet;
+        uniform vec3 uColorTop;
+        uniform vec3 uColorMid;
+        uniform vec3 uColorBottom;
 
         varying vec2 vUv;
         varying vec3 vNormal;
@@ -79,34 +101,34 @@ function Star({ size = 1 }: StarProps) {
         varying vec3 vWorldPosition;
 
         void main() {
-          // Create gradient based on position
-          float gradientY = (vPosition.y + 1.0) * 0.5;
-          float gradientX = (vPosition.x + 1.0) * 0.5;
+          // Create vertical gradient based on Y position
+          float gradientY = (vPosition.y + 1.2) / 2.4;
 
-          // Animate the gradient
-          float animatedGradient = gradientY + sin(uTime * 0.6) * 0.2;
+          // Animate the gradient subtly
+          float animatedGradient = gradientY + sin(uTime * 0.5) * 0.1;
           animatedGradient = clamp(animatedGradient, 0.0, 1.0);
 
-          // Create smooth gradient from pink to purple
-          vec3 gradient = mix(uPink, uPurple, animatedGradient);
+          // Three-color gradient: top -> mid -> bottom
+          vec3 gradient;
+          if (animatedGradient > 0.5) {
+            gradient = mix(uColorMid, uColorTop, (animatedGradient - 0.5) * 2.0);
+          } else {
+            gradient = mix(uColorBottom, uColorMid, animatedGradient * 2.0);
+          }
 
-          // Add magenta highlights
-          float highlight = sin(gradientX * 3.14159) * sin(gradientY * 3.14159);
-          gradient = mix(gradient, uMagenta, highlight * 0.4);
-
-          // Add violet in darker areas
-          float depth = (vPosition.z + 1.0) * 0.5;
-          gradient = mix(gradient, uViolet, (1.0 - depth) * 0.3);
-
-          // Fresnel edge glow
+          // Fresnel edge glow for that glossy look
           vec3 viewDir = normalize(cameraPosition - vWorldPosition);
           float fresnel = pow(1.0 - abs(dot(vNormal, viewDir)), 2.5);
-          gradient += fresnel * uMagenta * 0.5;
+          gradient += fresnel * uColorMid * 0.6;
 
-          // Subtle specular highlight
+          // Specular highlight
           vec3 lightDir = normalize(vec3(1.0, 1.0, 1.0));
-          float spec = pow(max(dot(reflect(-lightDir, vNormal), viewDir), 0.0), 24.0);
-          gradient += spec * 0.5;
+          float spec = pow(max(dot(reflect(-lightDir, vNormal), viewDir), 0.0), 32.0);
+          gradient += spec * 0.6;
+
+          // Add subtle depth shading
+          float depth = (vPosition.z + 0.5) / 1.0;
+          gradient = mix(gradient * 0.8, gradient, depth);
 
           gl_FragColor = vec4(gradient, 1.0);
         }
@@ -118,14 +140,14 @@ function Star({ size = 1 }: StarProps) {
   useFrame((state) => {
     if (!meshRef.current) return;
 
-    // Continuous rotation
-    meshRef.current.rotation.x += 0.004;
-    meshRef.current.rotation.y += 0.006;
+    // Smooth continuous rotation
+    meshRef.current.rotation.x += 0.003;
+    meshRef.current.rotation.y += 0.005;
     meshRef.current.rotation.z += 0.002;
 
-    // Bouncing animation
+    // Gentle floating animation
     const time = state.clock.getElapsedTime();
-    meshRef.current.position.y = Math.sin(time * 1.2) * 0.25;
+    meshRef.current.position.y = Math.sin(time * 1.0) * 0.2;
 
     // Update shader time
     if (materialRef.current) {
@@ -134,7 +156,7 @@ function Star({ size = 1 }: StarProps) {
   });
 
   return (
-    <mesh ref={meshRef} geometry={geometry} position={[0, 0, -size * 0.2]}>
+    <mesh ref={meshRef} geometry={geometry} position={[0, 0, -size * 0.15]}>
       <shaderMaterial
         ref={materialRef}
         attach="material"
@@ -160,12 +182,12 @@ export default function AnimatedStar({
         gl={{ antialias: true, alpha: true }}
         style={{ background: "transparent" }}
       >
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 5, 5]} intensity={1.2} color="#EC4899" />
-        <directionalLight position={[-5, -5, -5]} intensity={0.8} color="#8B5CF6" />
-        <pointLight position={[3, 3, 3]} intensity={1} color="#D946EF" />
-        <pointLight position={[-3, -3, 3]} intensity={0.8} color="#7C3AED" />
-        <Star size={size} />
+        <ambientLight intensity={0.6} />
+        <directionalLight position={[5, 5, 5]} intensity={1.0} color="#00B0FF" />
+        <directionalLight position={[-5, -5, -5]} intensity={0.6} color="#0041D5" />
+        <pointLight position={[3, 3, 3]} intensity={0.8} color="#00B0FF" />
+        <pointLight position={[-3, -3, 3]} intensity={0.6} color="#0041D5" />
+        <Sparkle size={size} />
       </Canvas>
     </div>
   );

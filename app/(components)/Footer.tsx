@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-
+import Image from "next/image";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Landing", href: "/landing" },
@@ -75,13 +75,13 @@ export default function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="relative w-full bg-gradient-to-b from-black via-[#001845] to-[#2D0A4E] text-white overflow-hidden"
+      className="relative w-full bg-gradient-to-b from-black via-[#001845] to-[#002060] text-white overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-10 w-64 h-64 bg-menakta-primaryFirst/10 rounded-full blur-[100px] animate-pulse" />
         <div
-          className="absolute bottom-10 right-10 w-80 h-80 bg-purple-600/10 rounded-full blur-[120px] animate-pulse"
+          className="absolute bottom-10 right-10 w-80 h-80 bg-menakta-primarySecond/10 rounded-full blur-[120px] animate-pulse"
           style={{ animationDelay: "1s" }}
         />
         <div
@@ -94,7 +94,7 @@ export default function Footer() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-1.5 h-1.5 bg-menakta-primaryFirst/30 rounded-full animate-float-slow" />
         <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-blue-300/40 rounded-full animate-float-medium" />
-        <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-purple-400/40 rounded-full animate-float-fast" />
+        <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-menakta-primarySecond/40 rounded-full animate-float-fast" />
         <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-menakta-primarySecond/30 rounded-full animate-float-slow" />
       </div>
 
@@ -109,9 +109,17 @@ export default function Footer() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="font-tusker text-4xl text-menakta-primarySecond mb-4 hover:text-white transition-colors duration-300">
-              MENAKTA
+            <Link href={'/'}>
+            <h2 className="mb-4 duration-300">
+            <Image
+              src="/logos/Menakta_White_Logo_2.png"
+              alt="Menakta Logo"
+              width={200}
+              height={200}
+            />
             </h2>
+            </Link>
+            
             <p className="font-clash text-[#D4E5FF] text-sm leading-relaxed mb-6">
               Engineering the future of digital experiences. We create
               technology that feels alive, responsive, and deeply human.
@@ -122,7 +130,7 @@ export default function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="group w-10 h-10 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/10 to-purple-600/10 flex items-center justify-center hover:from-menakta-primaryFirst hover:to-purple-600 hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300"
+                  className="group w-10 h-10 rounded-full border border-menakta-primaryFirst/50 bg-gradient-to-br from-menakta-primaryFirst/10 to-menakta-primarySecond/10 flex items-center justify-center hover:from-menakta-primaryFirst hover:to-menakta-primarySecond hover:border-menakta-primaryFirst hover:scale-110 transition-all duration-300"
                   aria-label={social.name}
                   style={{ animationDelay: `${0.3 + index * 0.1}s` }}
                 >
@@ -169,7 +177,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {/* Email */}
               <li className="group flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 flex items-center justify-center group-hover:from-menakta-primaryFirst group-hover:to-purple-600 transition-all duration-300">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 flex items-center justify-center group-hover:from-menakta-primaryFirst group-hover:to-menakta-primarySecond transition-all duration-300">
                   <svg
                     className="w-4 h-4 text-menakta-primarySecond group-hover:text-white transition-colors duration-300"
                     fill="none"
@@ -197,7 +205,7 @@ export default function Footer() {
 
               {/* Phone */}
               <li className="group flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 flex items-center justify-center group-hover:from-menakta-primaryFirst group-hover:to-purple-600 transition-all duration-300">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 flex items-center justify-center group-hover:from-menakta-primaryFirst group-hover:to-menakta-primarySecond transition-all duration-300">
                   <svg
                     className="w-4 h-4 text-menakta-primarySecond group-hover:text-white transition-colors duration-300"
                     fill="none"
@@ -225,7 +233,7 @@ export default function Footer() {
 
               {/* Location */}
               <li className="group flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-purple-600/20 flex items-center justify-center group-hover:from-menakta-primaryFirst group-hover:to-purple-600 transition-all duration-300">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-menakta-primaryFirst/20 to-menakta-primarySecond/20 flex items-center justify-center group-hover:from-menakta-primaryFirst group-hover:to-menakta-primarySecond transition-all duration-300">
                   <svg
                     className="w-4 h-4 text-menakta-primarySecond group-hover:text-white transition-colors duration-300"
                     fill="none"
@@ -277,7 +285,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="w-full font-clash px-6 py-3 bg-gradient-to-r from-menakta-primaryFirst to-purple-600 text-white rounded-lg text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primarySecond/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                className="w-full font-clash px-6 py-3 bg-gradient-to-r from-menakta-primaryFirst to-menakta-primarySecond text-white rounded-lg text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-menakta-primarySecond/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
               >
                 Subscribe
               </button>
@@ -325,7 +333,7 @@ export default function Footer() {
       </div>
 
       {/* Animated Bottom Line */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-menakta-primaryFirst via-menakta-primarySecond to-purple-600 opacity-50" />
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-menakta-primaryFirst via-menakta-primarySecond to-menakta-primaryFirst opacity-50" />
     </footer>
   );
 }
