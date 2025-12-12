@@ -8,6 +8,40 @@ This document provides a comprehensive overview of all development work complete
 
 ## Latest Updates
 
+### Hero Typography & UI Consistency Refactor
+**Commit:** `(pending)`
+
+#### Typography Changes
+- Updated all hero section headings from Tusker to Clash font for subheadings
+- Implemented responsive font sizing across breakpoints (2xl → 6xl)
+- Adjusted secondary headline sizing and spacing (mt-2 → mt-5)
+
+#### Gradient Overlay Updates
+- Replaced brand gradient overlays (`menakta-primaryFirst/60`, `menakta-primarySecond/40`) with blue-gray scheme:
+  - LandingHero, AboutHero, CareersHero, ProjectsHero, ServicesHero: `from-blue-900/60 via-gray-900/40`
+  - MiddleImageSection: `from-gray-900/80 via-gray-900/70`
+
+#### Button Visibility Improvements
+- Increased secondary/outline button border opacity for better contrast:
+  - Landing, About, Careers, Projects, Services hero buttons: `border-white/30` → `border-white/70`
+  - MiddleImageSection contact button: `border-white/30` → `border-white/90`
+
+#### Theme Toggle Redesign
+- Simplified background styling with conditional dark/light colors
+- Changed toggle circle from gradient to solid `bg-blue-700`
+- Updated sun icon color to `text-yellow-500`
+
+#### Logo Updates
+- Added responsive width constraints to navbar logo (`w-30 md:w-50`)
+- Added responsive width to footer logo
+- Updated navbar logo to use `Menakta_White_Logo_2.png` variant
+
+#### Other Changes
+- Adjusted CoreMessage gradient direction (`from` → `to`) and title sizing
+- Cleared default Next.js README content
+
+---
+
 ### Careers Page & Button Styling Update
 **Commit:** `2c24f98`
 
