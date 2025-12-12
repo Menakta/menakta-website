@@ -27,8 +27,8 @@ export default function MiddleImageSection() {
       </div>
 
       {/* Gradient overlay - blue, purple, transparent */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-menakta-primaryFirst/60 via-menakta-primarySecond/40 to-transparent" />
-      <div className="absolute inset-0 z-[2] bg-gradient-to-t from-theme-bg-primary via-transparent to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-gray-900/80 via-gray-900/70 to-transparent" />
+      <div className="absolute inset-0 z-[3] bg-gradient-to-t from-theme-bg-primary via-transparent to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -63,7 +63,7 @@ export default function MiddleImageSection() {
           </Link>
           <button
             onClick={scrollToContact}
-            className="w-full sm:w-auto font-clash px-8 py-4 border border-white/30 text-white rounded-full text-sm uppercase tracking-wider hover:bg-white/10 hover:border-white hover:scale-105 active:scale-95 transition-all duration-300 opacity-0 animate-[fadeInUp_0.6s_ease-out_1.4s_forwards]"
+            className="w-full sm:w-auto font-clash px-8 py-4 border border-white/90 text-white rounded-full text-sm uppercase tracking-wider hover:bg-white/10 hover:border-white hover:scale-105 active:scale-95 transition-all duration-300 opacity-0 animate-[fadeInUp_0.6s_ease-out_1.4s_forwards]"
           >
             Contact
           </button>

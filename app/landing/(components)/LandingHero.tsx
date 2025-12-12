@@ -28,12 +28,12 @@ export default function Hero() {
       </div>
 
       {/* Gradient overlay - blue, purple, transparent */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-menakta-primaryFirst/60 via-menakta-primarySecond/40 to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-blue-900/60 via-gray-900/40 to-transparent" />
       <div className="absolute inset-0 z-[2] bg-gradient-to-t from-theme-bg-primary via-transparent to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="font-tusker text-4xl uppercase tracking-tight leading-none mb-6 text-white">
+        <h1 className="font-clash text-2xl sm:text-3xl md:text-4xl lg:text-5xl  uppercase tracking-tight leading-none mb-6 text-white">
           <span className="inline-block opacity-0 animate-[fadeInUp_0.6s_ease-out_0.1s_forwards]">
             Engineering
           </span>{" "}
@@ -43,7 +43,7 @@ export default function Hero() {
           <span className="inline-block opacity-0 animate-[fadeInUp_0.6s_ease-out_0.3s_forwards]">
             Future
           </span>
-          <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-menakta-primarySecond mt-2">
+          <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-tusker text-menakta-primarySecond mt-5">
             <span className="inline-block opacity-0 animate-[fadeInUp_0.6s_ease-out_0.4s_forwards]">
               Digital
             </span>{" "}
@@ -79,7 +79,7 @@ export default function Hero() {
           </Link>
           <button
             onClick={scrollToContact}
-            className="w-full sm:w-auto font-clash px-8 py-4 border border-white/30 text-white rounded-full text-sm uppercase tracking-wider hover:bg-white/10 hover:border-white hover:scale-105 active:scale-95 transition-all duration-300 opacity-0 animate-[fadeInUp_0.6s_ease-out_1.4s_forwards]"
+            className="w-full sm:w-auto font-clash px-8 py-4 border border-white/70 text-white rounded-full text-sm uppercase tracking-wider hover:bg-white/10 hover:border-white hover:scale-105 active:scale-95 transition-all duration-300 opacity-0 animate-[fadeInUp_0.6s_ease-out_1.4s_forwards]"
           >
             Contact
           </button>

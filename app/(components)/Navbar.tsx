@@ -20,19 +20,19 @@ function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="relative w-14 h-7 rounded-full bg-gradient-to-r from-menakta-primaryFirst/20 to-menakta-primarySecond/20 border border-menakta-primaryFirst/30 hover:border-menakta-primarySecond/50 transition-all duration-300 flex items-center"
+      className={`relative w-14 h-7 rounded-full ${isDark?"bg-gray-800":"bg-white"} border transition-all duration-300 flex items-center`}
       aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
     >
       {/* Toggle Circle */}
       <div
-        className={`absolute w-5 h-5 rounded-full bg-gradient-to-br from-menakta-primaryFirst to-menakta-primarySecond shadow-lg transition-all duration-300 flex items-center justify-center ${
+        className={`absolute w-5 h-5 rounded-full bg-blue-700 shadow-lg transition-all duration-300 flex items-center justify-center ${
           isDark ? "left-1" : "left-8"
         }`}
       >
         {/* Sun Icon */}
         {!isDark && (
           <svg
-            className="w-3 h-3 text-white"
+            className="w-4 h-5 text-yellow-500"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -46,7 +46,7 @@ function ThemeToggle() {
         {/* Moon Icon */}
         {isDark && (
           <svg
-            className="w-3 h-3 text-white"
+            className="w-4 h-3 text-white"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -97,12 +97,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Image
-              src={isDark || !scrolled ? "/logos/Menakta_White_Logo.png" : "/logos/Menakta_Black_Logo.png"}
+          <div className="w-30 md:w-50">
+             <Image
+              src={isDark || !scrolled ? "/logos/Menakta_White_Logo_2.png" : "/logos/Menakta_Black_Logo.png"}
               alt="Menakta Logo"
               width={200}
               height={50}
+              layout="responsive"
             />
+          </div>
+           
           </Link>
 
           {/* Desktop Navigation */}

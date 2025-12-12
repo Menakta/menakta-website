@@ -24,10 +24,10 @@ export default function Message() {
     };
   }, []);
   return (
-   <section ref={ref} className="w-full py-32 md:px-20 px-2 relative overflow-hidden transition-colors duration-300 bg-gradient-to-b from-theme-bg-tertiary via-theme-bg-secondary to-theme-bg-primary text-theme-text-primary">
+   <section ref={ref} className="w-full py-32 md:px-20 px-2 relative overflow-hidden transition-colors duration-300 bg-gradient-to-t from-theme-bg-tertiary via-theme-bg-secondary to-theme-bg-primary text-theme-text-primary">
 
   {/* TITLE */}
-  <h2 className={`font-tusker text-center text-6xl md:text-7xl tracking-tight mb-16 ${isVisible ? "translate-y-0 opacity-0 animate-[fadeInUp_0.3s_ease-out_0.6s_forwards]" : ""}`}>
+  <h2 className={`font-tusker text-center text-4xl md:text-6xl tracking-tight mb-16 ${isVisible ? "translate-y-0 opacity-0 animate-[fadeInUp_0.3s_ease-out_0.6s_forwards]" : ""}`}>
     OUR MESSAGE
   </h2>
 

@@ -113,7 +113,7 @@ export default function Footer() {
             }`}
           >
             <Link href={'/'}>
-            <h2 className="mb-4 duration-300">
+            <h2 className="mb-4 duration-300 w-30 md:w-50">
             <Image
               src={isDark ? "/logos/Menakta_White_Logo_2.png" : "/logos/Menakta_Black_Logo.png"}
               alt="Menakta Logo"
